@@ -1,0 +1,871 @@
+.bigContainer {
+  width: 100%;
+  height: 2000vh;
+  position: relative;
+}
+.stickyBlock {
+  position: sticky;
+  top: 0;
+  user-select: none;
+}
+.mainAbout {
+  position: relative;
+}
+.title {
+  width: 83.33%;
+  font-size: 8.6vw;
+  font-weight: 400;
+  z-index: 3;
+  position: relative;
+  margin: 11.1vh 11.1vw 9.4vh 5.9vw;
+  color: #363b61;
+}
+.subtitle {
+  font-size: 3vw;
+  color: #363b61;
+  z-index: 4;
+  position: relative;
+}
+.text {
+  font-size: 1.3vw;
+  color: #363b61;
+  z-index: 4;
+  position: relative;
+}
+.orange {
+  color: #f77f1e;
+}
+.littleCircle {
+  width: 25vw;
+  height: 25vw;
+  position: absolute;
+  top: 20vh;
+  right: 30vw;
+  border: 1px solid rgba(253, 224, 201, 1);
+  border-radius: 50%;
+  z-index: 1;
+}
+.midCircle {
+  width: 50vw;
+  height: 50vw;
+  position: absolute;
+  top: 0vh;
+  right: 18vw;
+  border: 1px solid rgba(253, 224, 201, 1);
+  border-radius: 50%;
+  z-index: 1;
+}
+.bigCircle {
+  width: 75vw;
+  height: 75vw;
+  position: absolute;
+  top: -20vh;
+  right: 5vw;
+  border: 1px solid rgba(253, 224, 201, 1);
+  border-radius: 50%;
+  z-index: 1;
+}
+.littleStar {
+  width: 14.6vw;
+  height: 14.6vw;
+  position: absolute;
+  top: 7vh;
+  left: 37vw;
+  z-index: 1;
+  img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+.bigStar {
+  width: 35.6vw;
+  height: 35.6vw;
+  position: absolute;
+  top: 18vh;
+  left: 35vw;
+  z-index: 1;
+  img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+.descriptionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vh;
+  width: 27.7vw;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+}
+.titleBlock {
+  position: absolute;
+  width: 100%;
+  top: 0vh;
+}
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  width: 12vw;
+  color: white;
+  margin-top: 1.5vh;
+  background-color: #f77f1e; /* Основной цвет кнопки */
+  border-radius: 4.4vw;
+  padding: 2vh 1vh;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Скрываем то, что выходит за пределы кнопки */
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Первый фон (фон ближе к тексту) */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Начальная позиция за кнопкой */
+  width: 100%;
+  height: 100%;
+  border-radius: 4.4vw;
+  background-color: rgb(253, 140, 48); /* Первый фон (темный) */
+  z-index: 1;
+  transition: all 0.5s ease-in-out; /* Плавная анимация для первого фона */
+  transition-delay: 0s; /* Задержка при возврате фона */
+}
+
+/* Второй фон (фон дальше от текста) */
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-radius: 4.4vw;
+  left: -100%; /* Начальная позиция за кнопкой */
+  width: 100%;
+  height: 100%;
+  background-color: #f77f1e; /* Второй фон (светлый) */
+  z-index: 1; /* Он находится под первым фоном */
+  transition: all 0.5s ease-in-out; /* Плавная анимация для второго фона */
+}
+
+/* Анимация при наведении */
+.button:hover::before {
+  left: 0; /* Первый фон перемещается быстрее */
+  transition-delay: 0s; /* Убираем задержку при наведении */
+}
+
+.button:hover::after {
+  left: 0; /* Второй фон перемещается медленнее */
+  transition-delay: 0.1s; /* Добавляем задержку для плавности */
+}
+
+/* Возврат анимации при убирании курсора */
+.button::before {
+  transition-delay: 0.1s; /* Задержка при возврате для первого фона */
+}
+
+.button::after {
+  transition-delay: 0s; /* Без задержки для второго фона при возврате */
+}
+
+/* Дополнительный эффект масштабирования */
+.button:hover {
+  scale: 1.05;
+}
+
+.buttonText {
+  position: relative;
+  z-index: 2; /* Текст остается на переднем плане */
+}
+.videoContainer {
+  width: 98%;
+  margin: 9.4vh 1% 0 1%;
+  height: 88vh;
+  border-radius: 5vw;
+  z-index: 3;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  img {
+    width: 100%;
+    height: 130%;
+  }
+  .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, #222222 100%);
+  }
+  .videoButton {
+    width: 16vw;
+    height: 2.3vh;
+    color: white;
+    background-color: #f77f1e;
+    border-radius: 4.4vw;
+    padding: 2vh 0;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 74vh;
+    left: 40vw;
+    box-shadow: 2.7vw 0.3vw 7vw 4.1vw rgba(255, 107, 0, 0.3);
+    font-size: 1.3vw;
+
+    overflow: hidden; /* Скрываем то, что выходит за пределы кнопки */
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .videoButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начальная позиция за кнопкой */
+    width: 100%;
+    height: 100%;
+    border-radius: 4.4vw;
+    background-color: rgb(253, 140, 48); /* Первый фон (темный) */
+    z-index: 1;
+    transition: all 0.5s ease-in-out; /* Плавная анимация для первого фона */
+    transition-delay: 0s; /* Задержка при возврате фона */
+  }
+
+  .videoButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-radius: 4.4vw;
+    left: -100%; /* Начальная позиция за кнопкой */
+    width: 100%;
+    height: 100%;
+    background-color: #f77f1e; /* Второй фон (светлый) */
+    z-index: 1; /* Он находится под первым фоном */
+    transition: all 0.5s ease-in-out; /* Плавная анимация для второго фона */
+  }
+
+  .videoButton:hover::before {
+    left: 0; /* Первый фон перемещается быстрее */
+    transition-delay: 0s; /* Убираем задержку при наведении */
+  }
+
+  .videoButton:hover::after {
+    left: 0; /* Второй фон перемещается медленнее */
+    transition-delay: 0.1s; /* Добавляем задержку для плавности */
+  }
+
+  /* Возврат анимации при убирании курсора */
+  .videoButton::before {
+    transition-delay: 0.1s; /* Задержка при возврате для первого фона */
+  }
+
+  .videoButton::after {
+    transition-delay: 0s; /* Без задержки для второго фона при возврате */
+  }
+
+  /* Дополнительный эффект масштабирования */
+  .videoButton:hover {
+    scale: 1.05;
+  }
+
+  .buttonText {
+    position: relative;
+    z-index: 2; /* Текст остается на переднем плане */
+  }
+  .videoTitle {
+    color: white;
+    font-size: 3vw;
+    font-weight: 400;
+    position: absolute;
+    z-index: 3;
+    top: 52vh;
+    left: 40vw;
+  }
+  .maskedMan {
+    width: 3.7vw;
+    height: 15.2vh;
+    position: absolute;
+    top: 30%;
+    left: 59%;
+    border: 3px solid rgba(235, 87, 235, 1);
+    border-radius: 0.7vw;
+    .naz {
+      color: white;
+      background-color: rgba(235, 87, 235, 1);
+      position: absolute;
+      border-radius: 0.7vw;
+      width: 8.1vw;
+      text-align: center;
+      padding: 0.5vw 0;
+      top: -0.5vh;
+      left: -0.3vw;
+    }
+  }
+  .gun {
+    width: 3.4vw;
+    height: 9.7vh;
+    position: absolute;
+    top: 45%;
+    left: 58%;
+    border: 3px solid rgba(255, 50, 49, 1);
+    border-radius: 0.7vw;
+    .naz {
+      color: white;
+      background-color: rgba(255, 50, 49, 1);
+      position: absolute;
+      border-radius: 0.7vw;
+      width: 4vw;
+      text-align: center;
+      padding: 0.5vw 0;
+      top: -1.5vh;
+      left: -0.3vw;
+    }
+  }
+}
+.maskedMan,
+.gun {
+  opacity: 0; /* Изначально скрыто */
+  transition: opacity 0.5s ease; /* Плавный переход для opacity */
+}
+
+.videoContainer:hover .maskedMan,
+.videoContainer:hover .gun {
+  opacity: 1; /* Показываем блоки при наведении */
+}
+.theValues {
+  position: absolute;
+  width: 100%;
+}
+.worthesContainer {
+  position: relative;
+  z-index: 3;
+  width: 98%;
+  margin: 0 2%;
+  display: flex;
+  flex-direction: column;
+  .worth {
+    display: flex;
+    padding: 10vh 6vw;
+    gap: 18.2vw;
+    border-bottom: 1px solid rgba(230, 233, 237, 1);
+    width: 84vw;
+  }
+  .worthTitle {
+    color: #363b61;
+    font-size: 1.1vw;
+  }
+  .worthText {
+    color: #363b61;
+    font-size: 2.5vw;
+    width: 34.5vw;
+  }
+  .imageWrapper {
+    position: relative;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    width: 11vw;
+    height: 11vw;
+  }
+  .imageWrapper:hover {
+    border-color: rgba(54, 59, 97, 1);
+  }
+
+  .triangle {
+    width: 7vw;
+    height: 7vw;
+  }
+  .load {
+    width: 3.8vw;
+    height: 3.8vw;
+    opacity: 1;
+  }
+
+  .imageWrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.writtenAboutUs {
+  position: absolute;
+  display: flex;
+  gap: 18.5vw;
+  background-color: rgba(245, 247, 250, 1);
+  width: 81.4vw;
+  height: 60.6vh;
+  padding: 19.7vh 9.3vw;
+  top: 0vh;
+  left: 0vw;
+  z-index: 3;
+  .blockName {
+    color: #363b61;
+    font-size: 1.4vw;
+  }
+  .blockTitle {
+    font-size: 3.3vw;
+    font-weight: 400;
+    position: relative;
+    z-index: 4;
+    margin-bottom: 2vh;
+    color: #363b61;
+  }
+
+  .bgImage {
+    position: absolute;
+    top: 11.5vh;
+    left: 28.6vw;
+    img {
+      width: 19.2vw;
+      height: 21.4vh;
+    }
+  }
+}
+
+.ourTeam {
+  position: absolute;
+  display: flex;
+  gap: 18.5vw;
+  background-color: white;
+  width: 80vw;
+  height: 125vh;
+  padding: 8.7vh 9.3vw;
+  top: -60vh;
+  left: 0.7vw;
+  z-index: 3;
+  border-radius: 3vw;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 4;
+
+  .blockName {
+    color: #363b61;
+    font-size: 1.4vw;
+  }
+  .blockTitle {
+    font-size: 3.3vw;
+    font-weight: 400;
+    position: relative;
+    z-index: 4;
+    margin-bottom: 2vh;
+    color: #363b61;
+  }
+}
+
+.learnMore {
+  position: absolute;
+  display: flex;
+  gap: 18.5vw;
+  background-color: #d3dfdb;
+  width: 81.4vw;
+  height: 70.6vh;
+  padding: 14.7vh 9.3vw;
+  top: 0vh;
+  left: 0vw;
+  z-index: 3;
+  color: #363b61;
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2.7vh;
+    position: relative;
+    z-index: 4;
+  }
+  .textContent {
+    font-size: 1.4vw;
+  }
+  .textTitle {
+    font-size: 4.4vw;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.weInvite {
+  color: #363b61;
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 85vh;
+  background-color: #ffffff;
+  border-radius: 3vw 3vw 0 0;
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.6);
+  padding: 10.4vh 0;
+  z-index: 5;
+  .textBlock {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.7vh;
+    color: #363b61;
+  }
+  .textTitle {
+    font-size: 6.6vw;
+    color: #363b61;
+  }
+  .textContent {
+    font-size: 1.4vw;
+    color: #363b61;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .littleCircle {
+    width: 43vw;
+    height: 43vw;
+    top: 83vw;
+    right: 6.1vw;
+  }
+  .midCircle {
+    width: 123vw;
+    height: 123vw;
+    top: 42.6vw;
+    right: 0;
+    left: 11vw;
+  }
+  .bigCircle {
+    display: none;
+  }
+  .littleStar {
+    width: 27vw;
+    height: 27vw;
+    top: 55.7vw;
+    left: 30.6vw;
+  }
+  .bigStar {
+    width: 65.3vw;
+    height: 65.3vw;
+
+    top: 69.3vw;
+    left: 31.4vw;
+  }
+  .title {
+    width: 87.8vw;
+    font-size: 41px;
+    padding: 0 6.1vw;
+    margin: 66.6vw 0 0 0;
+    font-weight: 600;
+  }
+  .BackgroundAnim {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+  .button {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    width: 283px;
+    height: 35px;
+    margin-top: 1.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 64px;
+    padding: 16px 24px;
+  }
+
+  .descriptionBlock {
+    gap: 16px;
+    width: 87.8vw;
+    margin: 17vw 6.1vw 0 6.1vw;
+    .subtitle {
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .text {
+      font-size: 18px;
+      font-family: "Open Sans", sans-serif;
+    }
+  }
+
+  .videoContainer {
+    width: 100%;
+    margin: 9.4vh 0% 0 0%;
+    height: 175.5vw;
+    border-radius: 36px;
+    object-fit: cover;
+    img {
+      width: 100%;
+      height: 90.4vw;
+      border-radius: 36px;
+      transform: scale(3) translateX(-37px);
+    }
+    .imageMobileDiv {
+      border-radius: 36px;
+      object-fit: cover;
+      width: 100%;
+      height: 70.4vw;
+      overflow: hidden;
+    }
+    .wrapper {
+      z-index: -1;
+      background: rgba(245, 247, 250, 1);
+    }
+    .videoButton {
+      font-family: "Open Sans", sans-serif;
+      width: 75.4vw;
+      height: 6.8vw;
+      border-radius: 64px;
+      padding: 4.2vw 6.4vw;
+      position: static;
+      font-size: 18px;
+      margin: auto;
+    }
+    .videoTitleContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin: 24px;
+    }
+    .videoTitle {
+      color: rgba(54, 59, 97, 1);
+      font-size: 32px;
+      font-weight: 600;
+      position: static;
+    }
+    .ourVision {
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      color: rgba(67, 74, 83, 1);
+    }
+    .maskedMan {
+      width: 14.4vw;
+      height: 36.5vw;
+      top: 0%;
+      left: 46%;
+      border-radius: 10px;
+      .naz {
+        border-radius: 8px;
+        width: 31.2vw;
+        padding: 10px;
+        top: -3px;
+        left: -3px;
+        font-size: 24px;
+      }
+    }
+    .gun {
+      width: 11.4vw;
+      height: 25vw;
+      top: 9%;
+      left: 42%;
+      border-radius: 10px;
+      .naz {
+        border-radius: 8px;
+        width: 7.8vw;
+        padding: 10px;
+        top: -3px;
+        left: -3px;
+        font-size: 24px;
+      }
+    }
+  }
+  .maskedMan,
+  .gun {
+    opacity: 1; /* Изначально скрыто */
+  }
+
+  .theValues {
+    position: absolute;
+    width: 100%;
+    .title {
+      margin: 15px;
+      font-size: 72px;
+      width: 80%;
+    }
+  }
+  .worthesContainer {
+    position: relative;
+    z-index: 3;
+    width: 98%;
+    margin: 0 1%;
+    display: flex;
+    flex-direction: column;
+    .worth {
+      display: flex;
+      flex-direction: column;
+      padding: 6vw;
+      gap: 10px;
+      border-bottom: 1px solid rgba(230, 233, 237, 1);
+      width: 87vw;
+    }
+    .worthTitleMobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+    }
+    .worthTitle {
+      color: rgba(67, 74, 83, 1);
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+    }
+    .worthText {
+      color: rgba(54, 59, 97, 1);
+      font-size: 32px;
+      width: 80%;
+    }
+    .imageWrapper {
+      width: 32vw;
+      height: 32vw;
+    }
+
+    .triangle {
+      width: 17vw;
+      height: 20vw;
+    }
+    .load {
+      width: 13vw;
+      height: 13vw;
+      opacity: 1;
+    }
+
+    .imageWrapper img {
+      margin: auto;
+    }
+  }
+  .writtenAboutUs {
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 36px;
+    width: 87.2vw;
+    height: 202.7vw;
+
+    padding: 21.3vw 6.4vw 0 6.4vw;
+    background-color: rgba(245, 247, 250, 1);
+    .blockName {
+      color: rgba(67, 74, 83, 1);
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 4;
+    }
+    .blockNameMobile {
+      color: rgba(67, 74, 83, 1);
+      font-size: 18px;
+      font-family: "Open Sans", sans-serif;
+      position: relative;
+      z-index: 4;
+    }
+    .blockTitle {
+      font-size: 44px;
+      font-weight: 600;
+      position: relative;
+      z-index: 4;
+      margin-bottom: 2vh;
+      color: rgba(54, 59, 97, 1);
+    }
+    ///////////////////////////
+    .bgImage {
+      position: absolute;
+      top: 9vw;
+      left: -3vw;
+      img {
+        width: 47vw;
+        height: 32.8vw;
+      }
+    }
+  }
+
+  .ourTeam {
+    flex-direction: column;
+    gap: 10px;
+    width: 100vw;
+    height: 230vw;
+    padding: 12.8vw 0;
+    top: 0;
+    left: 0;
+    border-radius: 36px;
+    .blockName {
+      font-family: "Open Sans", sans-serif;
+      color: rgba(67, 74, 83, 1);
+      font-size: 16px;
+      margin-left: 24px;
+    }
+    .blockTitle {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 10vw;
+      color: #363b61;
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
+  .learnMore {
+    gap: 2vw;
+    width: 100%;
+    height: 195vw;
+    padding: 10.6vw 0;
+    color: #363b61;
+    .textContainer {
+      gap: 2.7vh;
+      margin: 0 6.4vw;
+      margin-top: 50vw;
+    }
+    .textContent {
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      color: rgba(67, 74, 83, 1);
+    }
+    .textTitle {
+      font-size: 44px;
+      font-weight: 600;
+      display: block;
+      box-shadow: 0px 0px 50px 71px rgba(255, 255, 255, 0.95);
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+    }
+
+    ///////////////////////////////////
+    .bgImage {
+      overflow: hidden;
+      position: absolute;
+      width: 137vw;
+      height: 234vw;
+      top: -21vw;
+      left: -39vw;
+    }
+    img {
+      top: -71vw;
+      left: -38px;
+      width: 110%;
+      height: 100%;
+    }
+  }
+  .weInvite {
+    border-radius: 36px 36px 0 0;
+    height: 65vh;
+    .textBlock {
+      align-items: normal;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 0 24px;
+      color: #363b61;
+    }
+    .textTitle {
+      font-size: 44px;
+      font-weight: 600;
+    }
+    .textContent {
+      font-size: 18px;
+      color: rgba(67, 74, 83, 1);
+      font-family: "Open Sans", sans-serif;
+    }
+  }
+}

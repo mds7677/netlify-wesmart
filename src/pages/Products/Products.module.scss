@@ -1,0 +1,293 @@
+.bigContainer {
+  width: 100%;
+  height: 2000vh;
+}
+.stickyBlock {
+  position: sticky;
+  top: 0;
+  user-select: none;
+}
+
+.productsScreenFirst {
+  width: 88.6%;
+  height: 88vh;
+  padding: 0 5.7%;
+  padding-top: 11.1vh;
+  position: absolute;
+  background-color: white;
+  z-index: 3;
+}
+.productsScreen {
+  width: 88.6%;
+  height: 88vh;
+  padding: 0 5.7%;
+  padding-top: 11.1vh;
+  position: absolute;
+  background-color: white;
+  z-index: 3;
+  border-radius: 3vw;
+  //box-shadow: 0px -2px 10px -2px rgba(0, 0, 0, 0.1);
+}
+.wrapper {
+  width: 94.3%;
+  height: 88vh;
+
+  position: absolute;
+  z-index: 3;
+}
+.titleText {
+  color: #36466a;
+  width: 83.33%;
+  font-size: 8.6vw;
+  font-weight: 400;
+  z-index: 4;
+  position: relative;
+}
+.subtitle {
+  font-size: 3vw;
+  color: #36466a;
+  z-index: 4;
+  position: relative;
+}
+.orange {
+  color: #f77f1e;
+}
+.defaultText {
+  color: #434a53;
+  font-size: 1.4vw;
+  margin-top: 1.5vh;
+  z-index: 4;
+  position: relative;
+}
+.imgBackgroundFirst {
+  position: absolute;
+  width: 58vw;
+  height: 80vh;
+  // background-image: url("../../../public/images/products1.png");
+  background-size: cover;
+  background-position: center;
+  top: 19vh;
+  right: 0;
+  z-index: 3;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vh;
+}
+.button {
+  width: 10vw;
+  height: auto;
+  color: white;
+  margin-top: 1.5vh;
+  background-color: #f77f1e;
+  border-radius: 4.4vw;
+  padding: 2vh 0;
+  text-align: center;
+  cursor: pointer;
+}
+.pageNum {
+  color: #aab2bd;
+  font-size: 1.1vw;
+  font-weight: 400;
+}
+.imgBackground {
+  position: absolute;
+  width: 70vw;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  top: -10vh;
+  right: 3vw;
+  z-index: 3;
+}
+.slideArrow {
+  position: absolute;
+  z-index: 3;
+  left: 0; /* Левое положение */
+  right: 0;
+  bottom: 5vh; /* Расстояние от нижней части блока */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  animation: bounce 2s infinite;
+  user-select: none;
+
+  span {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: bold;
+  }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #555;
+  }
+}
+
+/* Анимация Bounce */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* Анимация пульсации стрелки */
+.arrow {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1) rotate(45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(45deg);
+  }
+}
+//375 * 812
+@media screen and (max-width: 768px) {
+  .bigContainer {
+    width: 100%;
+    height: 1000vh;
+  }
+  .stickyBlock {
+    position: sticky;
+    top: 0;
+    user-select: none;
+  }
+
+  .productsScreenFirst {
+    width: auto;
+    height: 88vh;
+    padding-top: 11.1vh;
+    position: absolute;
+    background-color: white;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    padding-right: 5.7%;
+    margin-top: 12.3vh;
+  }
+  .productsScreen {
+    width: 88vw;
+
+    padding-left: 5.7%;
+    padding-right: 5.7%;
+
+    border-radius: 0;
+  }
+  .wrapper {
+    width: 94.3%;
+    height: 88vh;
+
+    position: absolute;
+    z-index: 3;
+  }
+  .titleText {
+    width: 83.33%;
+    font-size: 44px;
+    font-weight: 400;
+    z-index: 4;
+    position: relative;
+    color: rgba(54, 59, 97, 1);
+  }
+  .subtitle {
+    font-size: 32px;
+    color: rgba(54, 59, 97, 1);
+    z-index: 4;
+    position: relative;
+  }
+  .orange {
+    color: #f77f1e;
+  }
+  .defaultText {
+    font-size: 18px;
+    margin-top: 12px;
+    z-index: 4;
+    position: relative;
+    color: rgba(67, 74, 83, 1);
+  }
+  .imgBackgroundFirst {
+    width: 80vw;
+    height: 27vh;
+    // background-image: url("../../../public/images/products1.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 3;
+    top: 5vh;
+  }
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1vh;
+  }
+  .button {
+    width: 25.4vw;
+    padding: 2.6vw 4.4vw;
+    align-items: center;
+    justify-content: center;
+    height: 2vh;
+    color: white;
+    margin-top: 1.5vh;
+    background-color: #f77f1e;
+    border-radius: 4.4vw;
+    text-align: center;
+    cursor: pointer;
+  }
+  .pageNum {
+    color: rgba(170, 178, 189, 1);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 24px;
+  }
+  .imgBackground {
+    position: relative;
+    width: 80vw;
+    height: 27vh;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    right: 0;
+    z-index: 3;
+  }
+  .numDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.productDownArrow {
+  animation: blink 1s infinite;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 20vh;
+    width: 30px;
+}

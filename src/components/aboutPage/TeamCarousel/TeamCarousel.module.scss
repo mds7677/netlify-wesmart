@@ -1,0 +1,144 @@
+.carouselContainer {
+  width: 70.5vw;
+  
+  position: absolute;
+  z-index: 10;
+  top: 60vh;
+  left: 30vw;
+}
+
+.memberCard {
+  padding: 10px;
+
+  .imageDiv{
+    width: 16.6vw;
+    height: 16.6vw;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  .image {
+    width: 16.6vw;
+    height: 19.6vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    clip-path: circle(0% at 50% 50%); /* Изначально clip-path установлен на 0 */
+    transition: clip-path 1s ease-in-out; /* Анимация clip-path */
+  }
+  .load{
+    width: 16.6vw;
+    height: 16.6vw;
+    transition: transform 1s ease-in-out 0.5s; /* Анимация вращения */
+  }
+  .imageDiv:hover .load {
+    transform: rotate(360deg); /* Вращаем первую картинку на 360 градусов */
+    transition-delay: 0s; /* Вращение сразу при наведении */
+  }
+  
+  .imageDiv:hover .image {
+    clip-path: circle(100% at 50% 50%); /* Плавное отображение второй картинки */
+    transition-delay: 0.5s; /* Задержка отображения второй картинки на 0.5s */
+  }
+  
+  /* Анимация при убирании курсора */
+  .imageDiv:not(:hover) .image {
+    clip-path: circle(0% at 50% 50%); /* Сначала скрывается вторая картинка */
+    transition-delay: 0s; /* Без задержки для скрытия */
+  }
+  
+  .imageDiv:not(:hover) .load {
+    transform: rotate(0deg); /* Возвращаем первую картинку в исходное состояние */
+    transition-delay: 0.5s; /* Задержка вращения при убирании курсора */
+  }
+  .name {
+    font-size: 2.5vw;
+    font-weight: 400;
+    margin-top: 5vh;
+    padding-left: 2vw;
+    padding-right: 5vw;
+    color: #363b61;
+  }
+
+  .description {
+    font-size: 1.4vw;
+    color: #363b61;
+    margin-top: 5px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 13vw;
+  }
+  
+}
+
+.slick-dots {
+  bottom: -20px;
+  display: flex;
+  justify-content: center;
+}
+
+.slick-dots li {
+  display: none; /* Прячем стандартные точки */
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .carouselContainer {
+    width: 100%;
+  
+    position: absolute;
+    z-index: 10;
+    top: 95vw;
+    left: 0;
+  }
+  
+  .memberCard {
+    padding-left: 18vw;
+    .imageDiv{
+      width: 64vw;
+      height: 64vw;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+    .image {
+      width: 64vw;
+      height: 64vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      clip-path: circle(0% at 50% 50%); /* Изначально clip-path установлен на 0 */
+      transition: clip-path 1s ease-in-out; /* Анимация clip-path */
+    }
+    .load{
+      width: 64vw;
+      height: 64vw;
+      transition: transform 1s ease-in-out 0.5s; /* Анимация вращения */
+    }
+   
+    .name {
+      font-size: 36px;
+      font-weight: 600;
+      margin-top: 12.2vw;
+      padding-left: 2vw;
+      color: #363b61;
+    }
+  
+    .description {
+      width: 64vw;
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      color: rgba(67, 74, 83, 1);
+      padding-left: 2vw;
+    }
+  }
+  
+}

@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;    
+    font-family: "Bebas Neue", tahoma, sans-serif;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  @font-face {
+    font-family: "Bebas Neue";
+    src: url("../src/assets/fonts/BebasNeue Regular.ttf");
+  }
+
+  .wassupButton{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(36, 211, 102, 1);
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: pulse 2s infinite; /* Добавление анимации пульсации */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Исходный размер */
+    }
+    50% {
+        transform: scale(1.1); /* Увеличение на 10% */
+    }
+    100% {
+        transform: scale(1); /* Возврат к исходному размеру */
+    }
+}

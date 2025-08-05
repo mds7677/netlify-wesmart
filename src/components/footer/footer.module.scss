@@ -1,0 +1,243 @@
+.footerTransparent {
+  background-color: none;
+  padding: 20px 0;
+  z-index: 3;
+  color: white;
+  position: absolute;
+  width: 100vw;
+  height: fit-content;
+  top: 0;
+  .footerNav .footerLinks li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+}
+
+.footer {
+  background-color: transparent;
+  padding: 15px 0;
+  position: absolute;
+  z-index: 3;
+  width: 100vw;
+  height: fit-content;
+  top: 0;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.footerLogo {
+  flex: 2;
+  // margin-right: 25%;
+}
+.footerLogo img {
+  height: 50px;
+  cursor: pointer;
+}
+
+.footerNav {
+  flex: 2;
+}
+
+.footerNav .footerLinks {
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* Равномерное распределение элементов */
+  gap: 30px;
+  padding: 0;
+  margin-right: 0;
+}
+
+.footerLinksA {
+  text-decoration: none;
+  color: #363b61;
+  font-weight: 400;
+  transition: color 0.3s;
+  font-family: "Open Sans", sans-serif;
+}
+
+.requestDemoButton {
+  background-color: #f77f1e;
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 64px;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  width: 12vw;
+  color: white;
+  background-color: #f77f1e; /* Основной цвет кнопки */
+  border-radius: 4.4vw;
+  padding: 2vh 1vh;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Скрываем то, что выходит за пределы кнопки */
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Первый фон (фон ближе к тексту) */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Начальная позиция за кнопкой */
+  width: 100%;
+  height: 100%;
+  border-radius: 4.4vw;
+  background-color: rgb(253, 140, 48); /* Первый фон (темный) */
+  z-index: 1;
+  transition: all 0.5s ease-in-out; /* Плавная анимация для первого фона */
+  transition-delay: 0s; /* Задержка при возврате фона */
+}
+
+/* Второй фон (фон дальше от текста) */
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-radius: 4.4vw;
+  left: -100%; /* Начальная позиция за кнопкой */
+  width: 100%;
+  height: 100%;
+  background-color: #f77f1e; /* Второй фон (светлый) */
+  z-index: 1; /* Он находится под первым фоном */
+  transition: all 0.5s ease-in-out; /* Плавная анимация для второго фона */
+}
+
+/* Анимация при наведении */
+.button:hover::before {
+  left: 0; /* Первый фон перемещается быстрее */
+  transition-delay: 0s; /* Убираем задержку при наведении */
+}
+
+.button:hover::after {
+  left: 0; /* Второй фон перемещается медленнее */
+  transition-delay: 0.1s; /* Добавляем задержку для плавности */
+}
+
+/* Возврат анимации при убирании курсора */
+.button::before {
+  transition-delay: 0.1s; /* Задержка при возврате для первого фона */
+}
+
+.button::after {
+  transition-delay: 0s; /* Без задержки для второго фона при возврате */
+}
+
+/* Дополнительный эффект масштабирования */
+.button:hover {
+  scale: 1.05;
+}
+
+.buttonText {
+  position: relative;
+  z-index: 2; /* Текст остается на переднем плане */
+}
+.no-scroll {
+  overflow: hidden;
+}
+.headerButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .selectMobile{
+    color: white !important;
+    width: 55px;
+    height: 25px;
+  }
+  .footerTransparent {
+    margin-top: 20px;
+  }
+  .footer {
+    padding: 50px 0;
+  }
+
+  .footerContainer {
+    justify-content: center;
+    position: relative;
+  }
+
+  .footerLogo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .burgerMenu {
+    position: absolute;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  .burgerButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    z-index: 1002;
+  }
+  .menuBottomBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .mobileNav {
+    position: fixed; /* Меню всегда поверх */
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(54,59,97);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .mobileLinks {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobileLinks li {
+    margin: 20px 0;
+  }
+
+  .mobileLinks a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+  }
+  .menuOpen .bigContainer {
+    filter: blur(3px); /* Размываем фон при открытом меню */
+  }
+  .button {
+    padding: 10px 20px;
+    width: 331px;
+    height: 57px;
+    border-radius: 64px;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+  }
+}

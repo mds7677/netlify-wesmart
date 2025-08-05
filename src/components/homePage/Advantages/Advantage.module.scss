@@ -1,0 +1,116 @@
+.block {
+  
+  height: 42vh;
+  background-color: #f5f7fa; // Изначально фон пустой
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.5s ease;
+  overflow: hidden; /* Добавляем чтобы скрыть вылезание картинки */
+}
+
+.block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--bg-image); /* Используем переменную для картинки */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0; /* Изначально невидимо */
+  transition: opacity 0.5s ease; /* Плавное появление */
+  z-index: 0;
+}
+
+.descriptionAdvantage {
+
+  font-style: normal;
+  font-weight: 400;
+  padding: 0 32px;
+  width: 85%;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #434a53;
+  line-height: normal;
+  transition: opacity 0.3s ease;
+  z-index: 1; /* Положение выше фона */
+}
+.bottomBlock{
+  display: flex;
+    width: auto;
+    align-items: center;
+    padding: 0 32px;
+    width: 85%;
+    justify-content: space-between;
+}
+.titleAdvantage {
+  color: #363b61;
+  font-family: "Bebas Neue Cyrillic", sans-serif;
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 600;
+  z-index: 1;
+  width: 300px;
+}
+
+.circle {
+  width: 3vw;
+  height: 3vw;
+  background-color: #f77f1e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1; /* Положение выше фона */
+}
+
+.block:hover::before {
+  opacity: 1; /* Плавное проявление картинки */
+}
+
+.block:hover .descriptionAdvantage {
+  opacity: 0; /* Скрываем описание */
+}
+
+.block:hover .titleAdvantage {
+  color: white; /* Меняем цвет заголовка на белый */
+}
+
+
+@media screen and (max-width: 768px) {
+  .block {
+    height: 57.6vw;
+    border-radius: 24px;
+  }
+  
+  .descriptionAdvantage {
+    left: 12px;
+    right: 0;
+    top: 32px;
+  }
+  
+  .titleAdvantage {
+    font-family: unset;
+    font-size: 32px;
+    font-weight: 600;
+    color: rgba(54, 59, 97, 1);
+    bottom: 36px;
+    left: 12px;
+    width: auto;
+
+  }
+  
+  .circle {
+    width: 24px;
+    height: 24px;
+    bottom: 36px;
+    right: 12px;
+  }
+}

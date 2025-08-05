@@ -1,0 +1,685 @@
+.bigContainer {
+  width: 100%;
+  height: 2120vh;
+}
+.stickyBlock {
+  position: sticky;
+  top: 0;
+  user-select: none;
+}
+
+.headSection {
+  position: absolute;
+  width: 88vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 18vh 6vw;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 2vh;
+
+  .textTitle {
+    position: relative;
+    z-index: 3;
+    font-size: 8.8vw;
+    color: white;
+  }
+  .textContent {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    position: relative;
+    z-index: 3;
+    font-size: 1.3vw;
+    color: white;
+  }
+  .buttonPosition {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 40%;
+  }
+  .button {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    width: 12vw;
+    color: white;
+    margin-top: 1.5vh;
+    background-color: #f77f1e; /* Основной цвет кнопки */
+    border-radius: 4.4vw;
+    padding: 2vh 1vh;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Скрываем то, что выходит за пределы кнопки */
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Первый фон (фон ближе к тексту) */
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начальная позиция за кнопкой */
+    width: 100%;
+    height: 100%;
+    border-radius: 4.4vw;
+    background-color: rgb(253, 140, 48); /* Первый фон (темный) */
+    z-index: 1;
+    transition: all 0.5s ease-in-out; /* Плавная анимация для первого фона */
+    transition-delay: 0s; /* Задержка при возврате фона */
+  }
+
+  /* Второй фон (фон дальше от текста) */
+  .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-radius: 4.4vw;
+    left: -100%; /* Начальная позиция за кнопкой */
+    width: 100%;
+    height: 100%;
+    background-color: #f77f1e; /* Второй фон (светлый) */
+    z-index: 1; /* Он находится под первым фоном */
+    transition: all 0.5s ease-in-out; /* Плавная анимация для второго фона */
+  }
+
+  /* Анимация при наведении */
+  .button:hover::before {
+    left: 0; /* Первый фон перемещается быстрее */
+    transition-delay: 0s; /* Убираем задержку при наведении */
+  }
+
+  .button:hover::after {
+    left: 0; /* Второй фон перемещается медленнее */
+    transition-delay: 0.1s; /* Добавляем задержку для плавности */
+  }
+
+  /* Возврат анимации при убирании курсора */
+  .button::before {
+    transition-delay: 0.1s; /* Задержка при возврате для первого фона */
+  }
+
+  .button::after {
+    transition-delay: 0s; /* Без задержки для второго фона при возврате */
+  }
+
+  /* Дополнительный эффект масштабирования */
+  .button:hover {
+    scale: 1.05;
+  }
+
+  .buttonText {
+    position: relative;
+    z-index: 2; /* Текст остается на переднем плане */
+  }
+
+  .wrapper {
+    position: absolute;
+    top: -23vh;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vw;
+    background: linear-gradient(
+      90.26deg,
+      #29232f 0.19%,
+      rgba(130, 111, 149, 0) 99.74%
+    );
+  }
+  .homeBG {
+    position: absolute;
+    top: -30vw;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 115vw;
+  }
+}
+.contentBlock {
+  width: 88vw;
+  height: 50vh;
+  border-radius: 3.3vw 3.3vw 0 0;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  padding: 9.4vh 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10.6vh;
+  box-shadow: 0px -2px 10px -2px rgba(0, 0, 0, 0.1);
+}
+
+.arrowDown {
+  color: "#363B61";
+}
+
+.ourMission {
+  display: flex;
+  gap: 23.2vw;
+  width: auto;
+  margin-left: 28vw;
+}
+
+.slideArrow {
+  position: absolute;
+  left: 0; /* Левое положение */
+  right: 0;
+  bottom: 5vh; /* Расстояние от нижней части блока */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  user-select: none;
+
+  span {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: bold;
+  }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #555;
+    border-bottom: 2px solid #555;
+    transform: rotate(315deg);
+  }
+}
+
+/* Анимация Bounce */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* Анимация пульсации стрелки */
+.arrow {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1) rotate(45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(45deg);
+  }
+}
+
+.advantages {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding: 10px;
+  width: 100vw;
+  scroll-snap-type: x mandatory;
+  box-sizing: border-box;
+}
+
+.titleText {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 3.3vw;
+  color: #363b61;
+}
+.textContent {
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2vh;
+  font-size: 1.3vw;
+  color: #434a53;
+}
+
+.title {
+  font-size: 4.4vw;
+  color: rgba(34, 34, 34, 1);
+}
+.subtitle {
+  font-size: 2.5vw;
+  color: rgba(34, 34, 34, 1);
+}
+.safety {
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  width: 88vw;
+  height: 93vh;
+  background-color: white;
+  display: flex;
+  gap: 7.2vw;
+  align-items: center;
+
+  padding: 0 6vw;
+}
+.advantagesBlock {
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  width: 88vw;
+  height: 63vh;
+  background-color: white;
+  display: flex;
+  gap: 7.2vw;
+  align-items: center;
+
+  padding: 0 6vw;
+}
+.pageContainer {
+  position: absolute;
+  width: 100%;
+  height: 361vh;
+  top: 0;
+}
+
+.mapContainer {
+  position: absolute;
+  z-index: 4;
+  width: 88vw;
+  height: 93vh;
+  background-color: white;
+  padding: 0 6vw;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.writtenAboutUs {
+  position: absolute;
+  display: flex;
+  gap: 18.5vw;
+  background-color: rgba(245, 247, 250, 1);
+  width: 81.4vw;
+  height: 73vh;
+  padding: 13vh 9.3vw;
+  top: 0vh;
+  left: 0vw;
+  z-index: 3;
+  .blockName {
+    color: #363b61;
+    font-size: 1.1vw;
+    font-family: "Open Sans";
+    font-weight: 100;
+  }
+  .blockTitle {
+    font-size: 3.3vw;
+    font-weight: 400;
+    position: relative;
+    z-index: 4;
+    margin-bottom: 2vh;
+    color: #363b61;
+  }
+
+  .bgImage {
+    position: absolute;
+    top: 11.5vh;
+    left: 28.6vw;
+    img {
+      width: 19.2vw;
+      height: 21.4vh;
+    }
+  }
+  .logoAuthor {
+    display: flex;
+    align-items: center;
+    margin-top: 5vh;
+    gap: 30vw;
+    img {
+      max-width: 14.4vw;
+    }
+  }
+
+  .rightArrow {
+    position: absolute;
+    right: 2vw;
+    top: 50%;
+  }
+  .leftArrow {
+    position: absolute;
+    left: 2vw;
+    top: 50%;
+  }
+}
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  bottom: 16vh;
+  z-index: 5;
+  left: 0;
+  right: 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: rgba(204, 209, 217, 1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: rgba(247, 127, 30, 1); /* Активная точка будет черной */
+}
+
+.bigCircle {
+  width: 75vw;
+  height: 75vw;
+  position: absolute;
+  top: -6vh;
+  left: 17vw;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 127, 30, 1);
+}
+.midCircle {
+  width: 50vw;
+  height: 50vw;
+  position: absolute;
+  top: 17vh;
+  left: 30vw;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 127, 30, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.whiteCircle {
+  width: 50vw;
+  height: 50vw;
+  position: absolute;
+  top: 1vh;
+  left: 22vw;
+  border-radius: 50%;
+  border: 8vw solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.midCircleImage {
+  width: 120%;
+  height: 120%;
+}
+.smallCircle {
+  width: 25vw;
+  height: 25vw;
+  position: absolute;
+  top: 42vh;
+  left: 42vw;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 127, 30, 1);
+}
+
+.headSection1 {
+  position: absolute;
+
+  width: 35vw;
+  height: 34vw;
+  margin: 0;
+  padding: 0;
+
+  border: 400px solid red; /* Граница */
+  border-radius: 50%;
+  background-color: transparent;
+  left: 0;
+  top: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.arrow {
+  margin-top: 1vw;
+  margin-left: 6vw;
+  animation: blink 1s infinite;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: solid green;
+}
+
+@media screen and (max-width: 768px) {
+  .headSection1 {
+    width: 88vw;
+    height: 64vh;
+    padding: 28vh 6vw 8vh 6vw;
+    gap: 25px;
+    overflow: hidden;
+  }
+  .headSection {
+    width: 88vw;
+    height: 64vh;
+    padding: 28vh 6vw 8vh 6vw;
+    gap: 25px;
+    overflow: hidden;
+    .textTitle {
+      font-weight: 600;
+      font-size: 44px;
+    }
+    .textContent {
+      font-size: 18px;
+      margin-top: 0;
+    }
+    .button {
+      font-size: 18px;
+      width: 25.4vw;
+      margin-top: 0;
+      border-radius: 64px;
+      padding: 4.2vw 6.4vw;
+    }
+    .wrapper {
+      width: 100vw;
+      height: 130vh;
+    }
+    .homeBG {
+      position: absolute;
+      top: -84vw;
+      left: -50vw;
+      z-index: 1;
+      width: 422vw;
+      height: 182vh;
+    }
+  }
+  .arrow {
+    margin-top: 1vw;
+    margin-left: 6vw;
+  }
+  .bigCircle {
+    width: 208vw;
+    height: 208vw;
+    top: 0;
+    left: -43.7vw;
+  }
+  .midCircle {
+    width: 123vw;
+    height: 123vw;
+    top: 43vw;
+    left: 1.2vw;
+  }
+  .whiteCircle {
+    width: 123vw;
+    height: 123vw;
+    top: 43vw;
+    left: 1.2vw;
+    border: none;
+  }
+  .smallCircle {
+    width: 60vw;
+    height: 60vw;
+    top: 74.6vw;
+    left: 33vw;
+  }
+
+  .contentBlock {
+    width: 88vw;
+    height: 143.5vw;
+    border-radius: 36px 36px 0 0;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    padding: 12.5vw 6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10.6vh;
+  }
+  .ourMission {
+    gap: 0;
+    margin-left: 0;
+  }
+
+  .advantages {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    padding: 10px;
+    width: 100vw;
+    scroll-snap-type: x mandatory;
+    box-sizing: border-box;
+  }
+
+  .titleText {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #363b61;
+  }
+  .textContent {
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 12px;
+    font-size: 18px;
+    color: #434a53;
+  }
+
+  .title {
+    font-size: 4.4vw;
+    color: rgba(34, 34, 34, 1);
+  }
+  .subtitle {
+    font-size: 2.5vw;
+    color: rgba(34, 34, 34, 1);
+  }
+
+  .safety {
+    width: 100vw;
+    height: 220vw;
+    gap: 50px;
+    padding: 0;
+  }
+  .writtenAboutUs {
+    flex-direction: column;
+    gap: 8px;
+    width: 87.2vw;
+    height: 175vw;
+    padding: 21.3vw 6.4vw 10vw 6.4vw;
+    border-radius: 36px;
+    .blockName {
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      color: rgba(67, 74, 83, 1);
+    }
+    .blockTitle {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 2vh;
+    }
+
+    .bgImage {
+      position: absolute;
+      top: 11.5vh;
+      left: 28.6vw;
+      img {
+        width: 19.2vw;
+        height: 21.4vh;
+      }
+    }
+    .logoAuthor {
+      display: flex;
+      align-items: center;
+      margin-top: 24px;
+      gap: 100px;
+      img {
+        max-width: 37.4vw;
+      }
+    }
+
+    .rightArrow {
+      position: absolute;
+      right: 2vw;
+      top: 50%;
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .leftArrow {
+      position: absolute;
+      left: 2vw;
+      top: 50%;
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .dotsContainer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    bottom: 70px;
+    z-index: 5;
+    left: 0;
+    right: 0;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgba(204, 209, 217, 1);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: rgba(247, 127, 30, 1); /* Активная точка будет черной */
+  }
+}

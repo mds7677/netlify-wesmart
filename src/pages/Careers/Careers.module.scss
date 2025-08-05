@@ -1,0 +1,375 @@
+.bigContainer {
+  width: 100%;
+  height: 1000vh;
+}
+.stickyBlock {
+  position: sticky;
+  top: 0;
+  user-select: none;
+}
+
+.headSection {
+  position: absolute;
+  width: 88vw;
+    height: 64vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 18vh 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  .textTitle {
+    position: relative;
+    z-index: 3;
+    font-size: 8.8vw;
+    color: white;
+  }
+  .textContent {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    position: relative;
+    z-index: 3;
+    font-size: 20px;
+    color: white;
+  }
+  .button {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    width: 175px;
+    color: white;
+    margin-top: 25px;
+    background-color: #f77f1e;
+    border-radius: 64px;
+    padding: 16px 24px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+  }
+
+  .wrapper {
+    position: absolute;
+    top: -23vh;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+      90.26deg,
+      #29232f 0.19%,
+      rgba(130, 111, 149, 0) 99.74%
+    );
+  }
+  img {
+    position: absolute;
+    top: -23vh;
+    left: 0;
+    z-index: 1;
+    width: 115%;
+    height: 150%;
+  }
+}
+
+.contentBlock {
+  width: 88vw;
+  height: 266vh;
+  border-radius: 3.3vw 3.3vw 0 0;
+  background-color: white;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  z-index: 4;
+  padding: 9.4vh 6vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10.6vh;
+  box-shadow: 0px -2px 10px -2px rgba(0, 0, 0, 0.1);
+  .ourMission {
+    display: flex;
+    gap: 23.2vw;
+  }
+  .descText {
+    font-family: "SF Pro Display", sans-serif;
+    font-weight: 300;
+    color: rgba(170, 178, 189, 1);
+    font-size: 16px;
+  }
+  .titleText {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #363b61;
+  }
+  .textContent {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #434a53;
+  }
+
+  .textBlock {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .circle {
+    width: 12px;
+    height: 12px;
+    background-color: #f77f1e;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 22px;
+  }
+
+  .circleSecondPage {
+    width: 12px;
+    height: 12px;
+    background-color: #363b61;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 22px;
+  }
+
+  .separator {
+    background-color: rgba(230, 233, 237, 1);
+    width: 88.2vw;
+    height: 1px;
+    border: 1px solid rgba(230, 233, 237, 1);
+    margin: 0 auto;
+  }
+  .benefitsFirst {
+    display: flex;
+    flex-direction: row;
+    gap: 30.5vh;
+  }
+  .benefits {
+    padding-left: 30.5vw;
+    display: flex;
+    flex-direction: column; 
+  }
+  .title {
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4.4vw;
+    color: #363b61;
+  }
+  .subtitle {
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5vw;
+    color: #363b61;
+  }
+  .flexRowFirstPage {
+    display: flex;
+    gap: 5.7vw;
+    margin-top: -1vw;
+    align-items: center;
+  }
+  .flexRow {
+    display: flex;
+    gap: 5.7vw;
+  }
+  .flexCol {
+    display: flex;
+    flex-direction: column;
+    gap: 7.1vh;
+  }
+  .flexColSecondSlide {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 7.1vh;
+  }
+}
+
+.openPositions {
+  width: 100vw;
+  height: 61.3vh;
+  background-color: rgba(11, 102, 194, 1);
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  z-index: 4;
+  border-radius: 3.3vw 3.3vw 0 0;
+  .bgImg {
+    width:52vw;
+    height: 48vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .content {
+    width: 40vw;
+    height: 45vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  .title {
+    font-size: 64px;
+    color: #f5f7fa;
+  }
+  .text {
+    font-size: 20px;
+    color: #f5f7fa;
+    font-weight: 100;
+    width: auto;
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+.animatedButton {
+  position: relative;
+  overflow: hidden;
+  border-radius: 64px;
+  background-color: rgba(245, 247, 250, 0.9);
+  color: #363b61;
+  padding: 16px 24px;
+  width: 260px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  z-index: 1;
+  border: none;
+  .icon {
+    width: 13px;
+    height: 13px;
+    margin-left: 10px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.buttonBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 247, 250, 1);
+}
+
+.buttonText {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+@media screen and (max-width:768px) {
+  .headSection {
+    width: auto;
+      height: 100vh;
+    padding: 250px 25px 0 25px;
+    .textTitle {
+      font-size: 44px;
+    }
+    .wrapper {
+      top: -200px;
+      left: -300px;
+      width: 300%;
+      height: 120%;
+    }
+    img {
+      top: -200px;
+      left: -300px;
+      width: 300%;
+      height: 120%;
+    }
+  }
+
+
+
+
+
+  .contentBlock {
+    width: 88vw;
+    height: 700vw;
+    border-radius: 36px 36px 0 0;
+    padding: 9.4vh 6vw;
+    gap: 40px;
+    .ourMission {
+      gap: 15px;
+      flex-direction: column;
+    }
+    .descText {
+      font-size: 16px;
+    }
+    .titleText {
+      font-size: 32px;
+    }
+    .textContent {
+      font-size: 18px;
+    }
+    .benefitsFirst {
+      flex-direction: column;
+      gap: 25px;
+    }
+    .flexRowFirstPage {
+      flex-direction: column;
+      gap: 22px;
+      margin-top: 0;
+    }
+    .flexCol {
+      gap: 22px;
+    }
+    .benefits {
+      padding-left: 22px;
+    }
+    .title {
+      font-family: unset;
+      font-size: 32px;
+    }
+    .flexRow {
+      flex-direction: column;
+      gap: 0;
+    }
+    .flexColSecondSlide {
+      margin-top: 22px;
+      gap: 22px;
+    }
+
+    
+    
+    
+  }
+
+  .openPositions {
+    height: 61.3vh;
+    border-radius: 36px 36px 0 0;
+    .bgImg {
+      width:100vw;
+      height: auto;
+    }
+    .content {
+      width: 93vw;
+      height: auto;
+      top: 50px;
+      gap: 8px;
+    }
+    .title {
+      font-size: 32px;
+    }
+    .text {
+      font-size: 18px;
+    }
+  }
+  .animatedButton {
+    margin-top: 25px;
+  }
+}

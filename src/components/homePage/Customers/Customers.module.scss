@@ -1,0 +1,142 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3vw;
+}
+
+.textContainer {
+}
+
+.title {
+  font-size: 3vw;
+  color: #363b61;
+  z-index: 4;
+  position: relative;
+}
+
+.subTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #434a53;
+  margin-bottom: 3vw;
+}
+
+.titlePartner {
+  margin-top: 5vw;
+  font-size: 2vw;
+  color: #363b61;
+  z-index: 4;
+  position: relative;
+}
+
+/* Customers logos */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 3vw;
+}
+
+.logo {
+  width: 12.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+}
+
+.logo img {
+  max-width: 70%;
+
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Partners logos */
+.logoContainerPartner {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3vw;
+}
+
+.orange {
+  color: #f77f1e;
+  // margin-left: 10px;
+}
+.logoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vw;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30vw 6vw 30vw 6vw;
+  }
+  
+  .title {
+    font-weight: 600;
+    font-size: 32px;
+  }
+  
+  .subTitle {
+    font-size: 18px;
+    margin-bottom: 42px;
+  }
+  
+  .titlePartner {
+    margin-top: 15vw;
+    font-size: 24px;
+  }
+  
+  /* Customers logos */
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 6.4vw;
+  }
+  
+  .logo {
+    width: 38.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw;
+  }
+  
+  .logo img {
+    max-width: 70%;
+  
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Partners logos */
+  .logoContainerPartner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6vw;
+  }
+  
+  .orange {
+    color: #f77f1e;
+    // margin-left: 10px;
+  }
+  .logoRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+    gap: 20px;
+  }
+}

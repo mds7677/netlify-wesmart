@@ -1,0 +1,221 @@
+.mapContainer {
+  position: relative;
+  top: 61.2vh;
+  z-index: 4;
+  background-color: white;
+  overflow: hidden;
+}
+
+.mapImage {
+  width: 100vw;
+  height: 101vh;
+}
+.pointContainer {
+  position: absolute;
+}
+/* Стили для точек */
+.point {
+  width: 10px;
+  height: 10px;
+  background-color: #f77f1e;
+  border-radius: 50%;
+}
+
+.pointLabel {
+  color: #f77f1e;
+  font-size: 1.5vw;
+  font-family: "Bebas Neue Cyrillic", sans-serif;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+/* Стили для списка стран */
+.countryList {
+  position: absolute;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #2222221f;
+  border-radius: 16px 0px 16px 0px;
+}
+.newOffice {
+  position: absolute;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: rgba(247, 127, 30, 1);
+  border-radius: 16px 0px 16px 0px;
+}
+.place {
+  margin: 0;
+  font-size: 1.2vw;
+  color: white;
+}
+.soon {
+  margin: 0 0 1vh 1vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.country {
+  margin: 0;
+  font-size: 1.2vw;
+  color: #363b61;
+}
+
+/* Линия для Европы */
+.line {
+  position: absolute;
+  top: 18%;
+  left: 55.3%;
+  width: 1px;
+  height: 3.5vw;
+  background-color: #f77f1e;
+}
+
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  width: 12vw;
+  color: white;
+  background-color: #f77f1e; /* Основной цвет кнопки */
+  border-radius: 4.4vw;
+  padding: 2vh 1vh;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 130px;
+  overflow: hidden; /* Скрываем то, что выходит за пределы кнопки */
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Первый фон (фон ближе к тексту) */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Начальная позиция за кнопкой */
+  width: 100%;
+  height: 100%;
+  border-radius: 4.4vw;
+  background-color: rgb(253, 140, 48); /* Первый фон (темный) */
+  z-index: 1;
+  transition: all 0.5s ease-in-out; /* Плавная анимация для первого фона */
+  transition-delay: 0s; /* Задержка при возврате фона */
+}
+
+/* Второй фон (фон дальше от текста) */
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-radius: 4.4vw;
+  left: -100%; /* Начальная позиция за кнопкой */
+  width: 100%;
+  height: 100%;
+  background-color: #f77f1e; /* Второй фон (светлый) */
+  z-index: 1; /* Он находится под первым фоном */
+  transition: all 0.5s ease-in-out; /* Плавная анимация для второго фона */
+}
+
+/* Анимация при наведении */
+.button:hover::before {
+  left: 0; /* Первый фон перемещается быстрее */
+  transition-delay: 0s; /* Убираем задержку при наведении */
+}
+
+.button:hover::after {
+  left: 0; /* Второй фон перемещается медленнее */
+  transition-delay: 0.1s; /* Добавляем задержку для плавности */
+}
+
+/* Возврат анимации при убирании курсора */
+.button::before {
+  transition-delay: 0.1s; /* Задержка при возврате для первого фона */
+}
+
+.button::after {
+  transition-delay: 0s; /* Без задержки для второго фона при возврате */
+}
+
+/* Дополнительный эффект масштабирования */
+.button:hover {
+  scale: 1.05;
+}
+
+.buttonText {
+  position: relative;
+  z-index: 2; /* Текст остается на переднем плане */
+}
+
+@media screen and (max-width: 768px) {
+  .mapContainer {
+    top: 40.2vh;
+    z-index: 6;
+    overflow: visible;
+  }
+
+  .mapImage {
+    width: 100vw;
+    height: 71.2vw;
+  }
+
+  /* Стили для точек */
+  .point {
+    width: 5px;
+    height: 5px;
+  }
+
+  .pointLabel {
+    font-size: 18px;
+    font-family: unset;
+    font-weight: 500;
+  }
+
+  /* Стили для списка стран */
+  .countryList {
+    transform: translateX(-50%);
+    padding: 7px 5px 5px 7px;
+    border-radius: 12px 0px 12px 0px;
+  }
+  .newOffice {
+    padding: 7px 12px 5px 12px;
+    border-radius: 12px 0px 12px 0px;
+  }
+  .place {
+    margin: 0;
+    font-size: 14px;
+  }
+  .soon {
+    margin: 0 0 3px 12px;
+    font-size: 12px;
+  }
+
+  .country {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #363b61;
+  }
+
+  /* Линия для Европы */
+  .line {
+    position: absolute;
+    top: 18%;
+    left: 55.3%;
+    width: 1px;
+    height: 3.5vw;
+    background-color: #f77f1e;
+  }
+
+  .button {
+    width: 30vw;
+    padding: 3.6vw 4.4vw;
+    color: white;
+    border-radius: 64px;
+    bottom: -40px;
+    z-index: 3;
+  }
+}
