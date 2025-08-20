@@ -2,14 +2,14 @@ body {
     margin: 0;
     -ms-overflow-style: none;  
     scrollbar-width: none;    
-    font-family: "Bebas Neue", tahoma, sans-serif;
+    font-family: "Lato", tahoma, sans-serif;
   }
   ::-webkit-scrollbar {
     display: none;
   }
   @font-face {
-    font-family: "Bebas Neue";
-    src: url("../src/assets/fonts/BebasNeue Regular.ttf");
+    font-family: "Lato";
+    src: url("../src/assets/fonts/Lato/Lato-Regular.ttf");
   }
 
   .wassupButton{

@@ -1,6 +1,6 @@
 .mapContainer {
   position: relative;
-  top: 61.2vh;
+  top: 67vh;
   z-index: 4;
   background-color: white;
   overflow: hidden;
@@ -24,7 +24,7 @@
 .pointLabel {
   color: #f77f1e;
   font-size: 1.5vw;
-  font-family: "Bebas Neue Cyrillic", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   margin-left: 15px;
 }
@@ -72,7 +72,7 @@
 }
 
 .button {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   width: 12vw;
   color: white;
@@ -170,7 +170,7 @@
 
   .pointLabel {
     font-size: 18px;
-    font-family: unset;
+    font-family: "Lato";
     font-weight: 500;
   }
 

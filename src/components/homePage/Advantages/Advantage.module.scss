@@ -1,5 +1,4 @@
 .block {
-  
   height: 42vh;
   background-color: #f5f7fa; // Изначально фон пустой
   border-radius: 24px;
@@ -11,7 +10,13 @@
   transition: all 0.5s ease;
   overflow: hidden; /* Добавляем чтобы скрыть вылезание картинки */
 }
-
+.opacity{
+  position: absolute;
+  inset: 0;
+  background-color: rgba(178,178,178,0.9);
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
 .block::before {
   content: "";
   position: absolute;
@@ -23,19 +28,18 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0; /* Изначально невидимо */
+  /*opacity: 0.4;*/ /* Изначально невидимо */
   transition: opacity 0.5s ease; /* Плавное появление */
   z-index: 0;
 }
 
 .descriptionAdvantage {
-
   font-style: normal;
   font-weight: 400;
   padding: 0 32px;
   width: 85%;
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #434a53;
   line-height: normal;
   transition: opacity 0.3s ease;
@@ -83,6 +87,9 @@
   color: white; /* Меняем цвет заголовка на белый */
 }
 
+.block:hover .opacity {
+  opacity: 0;
+}
 
 @media screen and (max-width: 768px) {
   .block {

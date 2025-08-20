@@ -171,7 +171,7 @@ const Product = () => {
               <div
                 className={styles.textTitle}
                 style={{
-                  fontFamily: "Open Sans, sans-serif",
+                  fontFamily: "Lato, sans-serif",
                   fontSize: device === "Mobile" ? "6.8vw" : "5.4vw",
                   fontWeight: "600",
                   textTransform: "uppercase",

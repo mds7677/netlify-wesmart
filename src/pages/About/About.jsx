@@ -481,7 +481,7 @@ const About = () => {
             </div>
             <div
               className={styles.bgImage}
-              style={{ left: device === "Mobile" && isRtl ? "0vw" : "" }}
+              style={{ left: device === "Mobile" && isRtl ? "0vw" : ""}}
             >
               <img
                 style={{
@@ -492,7 +492,7 @@ const About = () => {
                         : "0" // для мобильных устройств
                       : isRtl
                       ? "0vw"
-                      : "50%",
+                      : "50%"
                 }}
                 src="/images/aboutLearnMoreBG.jpg"
                 alt="no-image"

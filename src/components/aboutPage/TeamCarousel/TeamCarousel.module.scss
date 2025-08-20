@@ -9,7 +9,7 @@
 
 .memberCard {
   padding: 10px;
-
+  font-family: Lato;
   .imageDiv{
     width: 16.6vw;
     height: 16.6vw;
@@ -90,7 +90,6 @@
 @media screen and (max-width: 768px) {
   .carouselContainer {
     width: 100%;
-  
     position: absolute;
     z-index: 10;
     top: 95vw;
@@ -99,6 +98,7 @@
   
   .memberCard {
     padding-left: 18vw;
+    font-family: Lato;
     .imageDiv{
       width: 64vw;
       height: 64vw;

@@ -195,9 +195,9 @@ const HomeV2 = () => {
             style={{
               color: "rgba(54, 59, 97, 1)",
               letterSpacing: isRtl ? "-0.05em" : "normal",
-              fontFamily: "Open Sans, sans-serif",
+              fontFamily: "Lato, sans-serif",
               fontSize: device === "Mobile" ? "7vw" : "5.9vw",
-              fontWeight: "600",
+              fontWeight: "700",
               textTransform: "uppercase", // Все буквы станут заглавными
               lineHeight:
                 device === "Mobile" ? "48px" : isRtl ? "8.6vw" : "8vw",
@@ -319,8 +319,8 @@ const HomeV2 = () => {
           </motion.div>
           <AboutUsSlider />
 
-          <Form top={device === "Mobile" ? "318vh" : "400vh"} />
-          <TrueFooter top={device === "Mobile" ? "415vh" : "490vh"} />
+          <Form top={device === "Mobile" ? "318vh" : "423vh"} />
+          <TrueFooter top={device === "Mobile" ? "415vh" : "498vh"} />
         </motion.div>
       </div>
       <Modal isVisible={isModalVisible} onClose={handleModalClose} />

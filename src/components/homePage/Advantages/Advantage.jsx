@@ -25,8 +25,8 @@ const AdvantageBlock = ({
       className={styles.block}
       style={{ "--bg-image": `url(${backgroundImage})` }} // Устанавливаем переменную фона
       onClick={device !== "Mobile" ? handleClickProduct : undefined} // Условие для onClick
-    >
-      <div className={styles.descriptionAdvantage}>{description}</div>
+    ><div className={styles.opacity}></div>
+      <div className={styles.descriptionAdvantage}></div>
       <div className={styles.bottomBlock}>
         <div
           className={styles.titleAdvantage}
