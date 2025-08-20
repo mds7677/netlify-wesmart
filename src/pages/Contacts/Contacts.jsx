@@ -180,20 +180,21 @@ export default function Contacts() {
             {commonContacts && commonContacts?.src_for_google_maps && (
               <div className={styles.mapImage}>
                 <iframe
-                  style={{ height: `calc(100vw * 0.5625)`, border: 0 }}
-                  title="Google Maps"
-                  src={commonContacts?.src_for_google_maps}
+                    style={{height: `calc(100vw * 0.5625)`, border: 0}}
+                    title="Google Maps"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1274.455112582617!2d35.34575958164634!3d32.92642933536022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c3054b6e8c5f9%3A0x15deb89a75712d74!2zR2F6aXQgMTAsIEthcm1pZWwsINCY0LfRgNCw0LjQu9GM!5e0!3m2!1sru!2sby!4v1755683477201!5m2!1sru!2sby"
+                  // src={commonContacts?.src_for_google_maps}
                   width={`100%`}
                   height={`calc(100vw * 0.5625)`}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                />
+                  />
               </div>
             )}
           </div>
-          <Form isShadow={false} />
-          <TrueFooter />
+          <Form isShadow={false}/>
+          <TrueFooter/>
         </div>
       </div>
     </div>
