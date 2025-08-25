@@ -1,7 +1,8 @@
 .trueFooter {
   width: 88vw;
-  height: 40vh;
-  padding: 7.2vh 6vw;
+  height: 35vh;
+  margin-top: 4vh;
+  padding: 7.0vh 6vw;
   background-color: #363b61;
   border-radius: 3vw 3vw 0 0;
   display: flex;
@@ -14,13 +15,13 @@
     display: flex;
     gap: 12vw;
     border-bottom: 0.5px solid #ffffff;
-    padding-bottom: 7.7vh;
+    padding-bottom: 4.0vh;
   }
   .row2 {
     display: flex;
     align-items: center;
     gap: 14vw;
-    margin-top: 4vh;
+    margin-top: 3.0vh;
   }
   .column {
     display: flex;
