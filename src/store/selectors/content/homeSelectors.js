@@ -11,8 +11,8 @@ export const selectHomeMediaLoading = (state) => state.content.home.media.loadin
 export const selectHomeMediaError = (state) => state.content.home.media.error;
 
 // Written About Slider selectors
-export const selectWrittenAboutSlider = (state) => {
-  const language = localStorage.getItem('language') === 'he' ? 'he' : 'en';
+export const selectWrittenAboutSlider = (state,language) => {
+  // const language = localStorage.getItem('language') === 'he' ? 'he' : 'en';
   return state.content.home.writtenAboutSlider[language];
 };
 export const selectWrittenAboutSliderLoading = (state) => state.content.home.writtenAboutSlider.loading;

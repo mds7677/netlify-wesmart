@@ -52,7 +52,7 @@ export const homeSlice = createSlice({
         state.writtenAboutSlider.error = null;
       })
       .addCase(fetchWrittenAboutSlider.fulfilled, (state, action) => {
-        const lang = action.payload.language === 'he' ? 'he' : 'en';
+        const lang = action.payload.language || "en";
         state.writtenAboutSlider[lang] = action.payload.data;
         state.writtenAboutSlider.loading = false;
       })
