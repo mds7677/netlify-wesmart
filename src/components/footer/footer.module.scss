@@ -54,12 +54,18 @@
   margin-right: 0;
 }
 
+.enFont{
+  font-family: "Lato", sans-serif;
+}
+.hebFont{
+  font-family: "Arimo", sans-serif;
+}
+
 .footerLinksA {
   text-decoration: none;
   color: #363b61;
   font-weight: 400;
   transition: color 0.3s;
-  font-family: "Lato", sans-serif;
 }
 
 .requestDemoButton {
@@ -69,12 +75,10 @@
   border-radius: 64px;
   text-decoration: none;
   font-weight: 400;
-  font-family: "Lato", sans-serif;
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .button {
-  font-family: "Lato", sans-serif;
   font-weight: 400;
   width: 12vw;
   color: white;

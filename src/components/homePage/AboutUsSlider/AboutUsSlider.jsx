@@ -87,10 +87,10 @@ const AboutUsSlider = () => {
 
   return (
     <motion.div
-      className={styles.writtenAboutUs}
+      className={`${styles.writtenAboutUs} ${language === "heb" ? styles.hebFont : styles.enFont}`}
       style={{ top: device === "Mobile" ? "227vh" : "314vh" }}
     >
-      <div className={styles.blockName}>{t("written_about_us")}</div>
+      <div className={`${styles.blockName} ${language === "heb" ? styles.hebFont : styles.enFont}`}>{t("written_about_us")}</div>
       <div>
         <div
           className={styles.blockTitle}

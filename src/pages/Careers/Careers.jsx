@@ -202,11 +202,11 @@ const Careers = () => {
           </div>
           <div
             style={{ whiteSpace: "pre-line" }}
-            className={styles.textContent}
+            className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}
           >
             {careerPageData && careerPageData?.description}
           </div>
-          <div className={styles.button}>
+          <div className={`${styles.button} ${language === "heb" ? styles.hebFont : styles.enFont}`}>
             {careerPageData && careerPageData?.button_text}
           </div>
           {careersPageMediaData && careersPageMediaData?.image && (
@@ -224,20 +224,20 @@ const Careers = () => {
           >
             <div
               style={{ textTransform: "uppercase" }}
-              className={styles.descText}
+              className={`${styles.descText} ${language === "heb" ? styles.hebFont : styles.enFont}`}
             >
               {t("careers.our_mission")}
             </div>
             <div>
               <div
                 style={{ whiteSpace: "pre-line" }}
-                className={styles.titleText}
+                className={`${styles.titleText} ${language === "heb" ? styles.hebFont : styles.enFont}`}
               >
                 {ourMissionData && ourMissionData?.title}
               </div>
               <div
                 style={{ whiteSpace: "pre-line", marginLeft: "0" }}
-                className={styles.textContent}
+                className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}
               >
                 {ourMissionData && ourMissionData?.description}
               </div>
@@ -247,7 +247,7 @@ const Careers = () => {
           <div className={styles.benefitsFirst}>
             <div
               style={{ textTransform: "uppercase" }}
-              className={styles.descText}
+              className={`${styles.descText} ${language === "heb" ? styles.hebFont : styles.enFont}`}
             >
               {t("careers.chose_wismart")}
             </div>
@@ -259,7 +259,7 @@ const Careers = () => {
                     {whyUsData?.Lines?.slice(0, 4).map((item, index) => (
                       <div key={`left-${index}`} className={styles.textBlock}>
                         <div className={styles.circle}></div>
-                        <div className={styles.textContent}>
+                        <div className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}>
                           {item.left_field}
                         </div>
                       </div>
@@ -269,7 +269,7 @@ const Careers = () => {
                     {whyUsData?.Lines?.slice(0, 4).map((item, index) => (
                       <div key={`right-${index}`} className={styles.textBlock}>
                         <div className={styles.circle}></div>
-                        <div className={styles.textContent}>
+                        <div className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}>
                           {item.right_field}
                         </div>
                       </div>
@@ -280,12 +280,12 @@ const Careers = () => {
           </div>
           <div className={styles.separator}></div>
           <div className={styles.benefits}>
-            <div style={{ whiteSpace: "pre-line" }} className={styles.title}>
+            <div style={{ whiteSpace: "pre-line" }} className={`${styles.title} ${language === "heb" ? styles.hebFont : styles.enFont}`}>
               {employeeBenefitsData && employeeBenefitsData?.Block?.title}
             </div>
             <div
               style={{ whiteSpace: "pre-line", marginLeft: "0" }}
-              className={styles.textContent}
+              className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}
             >
               {employeeBenefitsData && employeeBenefitsData?.Block?.description}
             </div>
@@ -299,7 +299,7 @@ const Careers = () => {
                     style={{ height: device === "Desktop" ? "100%" : "auto" }}
                   >
                     <div className={styles.circleSecondPage}></div>
-                    <div className={styles.textContent}>{item.left_field}</div>
+                    <div className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}>{item.left_field}</div>
                   </div>
                 ))}
               </div>
@@ -312,7 +312,7 @@ const Careers = () => {
                     style={{ height: device === "Desktop" ? "100%" : "auto" }}
                   >
                     <div className={styles.circleSecondPage}></div>
-                    <div className={styles.textContent}>{item.right_field}</div>
+                    <div className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}>{item.right_field}</div>
                   </div>
                 ))}
               </div>
@@ -329,14 +329,14 @@ const Careers = () => {
             alt="no-image"
           />
           <div className={styles.content}>
-            <div style={{ whiteSpace: "pre-line" }} className={styles.title}>
+            <div style={{ whiteSpace: "pre-line" }} className={`${styles.title} ${language === "heb" ? styles.hebFont : styles.enFont}`}>
               {joinUsData && joinUsData?.title}
             </div>
-            <div style={{ whiteSpace: "pre-line" }} className={styles.text}>
+            <div style={{ whiteSpace: "pre-line" }} className={`${styles.text} ${language === "heb" ? styles.hebFont : styles.enFont}`}>
               {joinUsData && joinUsData?.description}
             </div>
             <motion.button
-              className={styles.animatedButton}
+              className={`${styles.animatedButton} ${language === "heb" ? styles.hebFont : styles.enFont}`}
               whileHover="hover"
               initial="initial"
               onClick={() => window.open(joinUsData?.button_url, "_blank")}

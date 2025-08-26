@@ -31,7 +31,7 @@ const AdvantagesSlider = ({ left }) => {
     : [];
 
   return (
-    <div className={styles.sliderContainer}>
+    <div className={`${styles.sliderContainer} ${isRtl ? styles.hebFont : styles.enFont}`}>
       <motion.div className={styles.sliderWrapper} style={{ left }}>
         {slides.map((slide) => (
           <div className={styles.slide} key={slide.slug}>

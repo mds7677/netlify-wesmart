@@ -171,7 +171,7 @@ const Product = () => {
               <div
                 className={styles.textTitle}
                 style={{
-                  fontFamily: "Lato, sans-serif",
+                  fontFamily: isRtl ? "Arimo, sans-serif" : "Lato, sans-serif",
                   fontSize: device === "Mobile" ? "6.8vw" : "5.4vw",
                   fontWeight: "600",
                   textTransform: "uppercase",
@@ -182,13 +182,13 @@ const Product = () => {
                 {generalData && generalData?.intro_title}
               </div>
               <div
-                className={styles.textContent}
+                className={`${styles.textContent} ${isRtl  ? styles.hebFont : styles.enFont}`}
                 style={{ textAlign: "justify" }}
               >
                 {generalData && generalData?.intro_description}
               </div>
               <div
-                className={styles.button}
+                className={`${styles.button} ${isRtl ? styles.hebFont : styles.enFont}`}
                 onClick={handleModalOpen}
                 onClose={handleModalClose}
               >
@@ -233,18 +233,18 @@ const Product = () => {
                     style={{ fontSize: device === "Mobile" ? "22px" : "64px" }}
                   />
                 )}
-                <div className={styles.descText} style={{ cursor: "pointer" }}>
+                <div className={`${styles.descText} ${isRtl ? styles.hebFont : styles.enFont}`} style={{ cursor: "pointer" }}>
                   {t("VIEW_ALL_OTHER_PRODUCTS")}
                 </div>
               </div>
               <div>
                 <div
-                  className={styles.titleText}
+                  className={`${styles.titleText} ${isRtl ? styles.hebFont : styles.enFont}`}
                   style={{ whiteSpace: "pre-line" }}
                 >
                   {generalData && generalData.common_title}
                 </div>
-                <div className={styles.textContent}>
+                <div className={`${styles.textContent} ${isRtl ? styles.hebFont : styles.enFont}`}>
                   {generalData && generalData.common_description}
                 </div>
               </div>
@@ -297,9 +297,9 @@ const Product = () => {
                       width: device === "Mobile" ? "100%" : "",
                     }}
                   >
-                    <div className={styles.titleText}>{card.title}</div>
+                    <div className={`${styles.titleText} ${isRtl ? styles.hebFont : styles.enFont}`}>{card.title}</div>
                     <div
-                      className={styles.textContent}
+                      className={`${styles.textContent} ${isRtl ? styles.hebFont : styles.enFont}`}
                       style={{ color: "rgba(67, 74, 83, 1)" }}
                     >
                       {card.description}

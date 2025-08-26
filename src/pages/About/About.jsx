@@ -324,7 +324,7 @@ const About = () => {
   }, [dispatch, ourLanguage, inviteBlocks]);
 
   return (
-    <div className={styles.bigContainer} data-scroll-container ref={scrollRef}>
+    <div className={`${styles.bigContainer} ${isRtl ? styles.hebFont : styles.enFont}`} data-scroll-container ref={scrollRef}>
       <div className={styles.stickyBlock} data-scroll-section>
         <motion.div className={styles.mainAbout}>
           <TitleSection ourLanguage={ourLanguage} top={transforms.first} />
@@ -346,7 +346,7 @@ const About = () => {
           >
             {device === "Mobile" ? (
               <>
-                <div className={styles.blockName}>
+                <div className={`${styles.blockName} ${ isRtl ? styles.hebFont : styles.enFont}`}>
                   {t("Customized_solutions")}
                 </div>
                 <div>
@@ -371,7 +371,7 @@ const About = () => {
                   </div>
                   <div
                     style={{ whiteSpace: "pre-line" }}
-                    className={styles.blockNameMobile}
+                    className={`${styles.blockNameMobile} ${ isRtl ? styles.hebFont : styles.enFont}`}
                   >
                     {customizedSolutionsBlocks &&
                       customizedSolutionsBlocks?.description}
@@ -410,11 +410,11 @@ const About = () => {
             </div>
           </motion.div>
           <motion.div
-            className={styles.ourTeam}
+            className={`${styles.ourTeam} ${isRtl ? styles.hebFont : styles.enFont}`}
             style={{ top: transforms.fourth }}
           >
             <div
-              className={styles.blockName}
+              className={`${styles.blockName} ${ isRtl? styles.hebFont : styles.enFont}`}
               style={{ marginRight: isRtl ? "25px" : "0" }}
             >
               {t("OUR_TEAM")}
@@ -422,7 +422,7 @@ const About = () => {
             <div>
               <div
                 style={{ whiteSpace: "pre-line" }}
-                className={styles.blockTitle}
+                className={`${styles.blockTitle}${isRtl ? styles.hebFont : styles.enFont}`}
               >
                 {ourTeamBlocks && ourTeamBlocks?.Title?.title}
               </div>
@@ -438,7 +438,7 @@ const About = () => {
             </div>
           </motion.div>
           <motion.div
-            className={styles.learnMore}
+            className={`${styles.learnMore} ${ isRtl ? styles.hebFont : styles.enFont}`}
             style={{
               top: transforms.fifth,
               backgroundColor: isRtl ? "#d3dfdb" : "#dbe3e6",
@@ -468,12 +468,12 @@ const About = () => {
               </div>
               <div
                 style={{ whiteSpace: "pre-line" }}
-                className={styles.textContent}
+                className={`${styles.textContent} ${isRtl ? styles.hebFont : styles.enFont}`}
               >
                 {learnMoreBlocks && learnMoreBlocks?.description}
                 <br />
               </div>
-              <div className={styles.button}>
+              <div className={`${styles.button} ${isRtl ? styles.hebFont : styles.enFont}`}>
                 <span className={styles.buttonText}>
                   {learnMoreBlocks && learnMoreBlocks?.buttonText}
                 </span>
@@ -510,7 +510,7 @@ const About = () => {
             </div>
             <div
               style={{ whiteSpace: "pre-line" }}
-              className={styles.textContent}
+              className={`${styles.textContent} ${isRtl? styles.hebFont : styles.enFont}`}
             >
               {inviteBlocks && inviteBlocks?.description}
             </div>

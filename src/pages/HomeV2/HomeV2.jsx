@@ -195,7 +195,7 @@ const HomeV2 = () => {
             style={{
               color: "rgba(54, 59, 97, 1)",
               letterSpacing: isRtl ? "-0.05em" : "normal",
-              fontFamily: "Lato, sans-serif",
+              fontFamily: language === "heb" ? "Arimo, sans-serif" : "Lato, sans-serif",
               fontSize: device === "Mobile" ? "7vw" : "5.9vw",
               fontWeight: "700",
               textTransform: "uppercase", // Все буквы станут заглавными
@@ -207,17 +207,17 @@ const HomeV2 = () => {
             {homeScreenData && homeScreenData?.title}
           </div>
           <div
-            className={styles.textContent}
+            className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}
             style={{ color: "rgba(54, 59, 97, 1)" }}
           >
             {homeScreenData && homeScreenData?.description}
           </div>
           <div
-            className={styles.button}
+            className={`${styles.button} ${language === "heb" ? styles.hebFont : styles.enFont}`}
             onClick={handleModalOpen}
             onClose={handleModalClose}
           >
-            <span className={styles.buttonText}>
+            <span className={`${styles.buttonText} ${language === "heb" ? styles.hebFont : styles.enFont}`}>
               {homeScreenData && homeScreenData?.button_title}
             </span>
           </div>
@@ -254,17 +254,17 @@ const HomeV2 = () => {
                 device === "Mobile" ? "48px" : isRtl ? "8.6vw" : "8.8vw",
             }}
           ></div>
-          <div className={styles.textContent}> </div>
+          <div className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}> </div>
 
           <div
-            className={` ${styles.button} ${styles.buttonPosition}`}
+            className={`${styles.button} ${styles.buttonPosition}`}
             style={{
               marginBottom: device === "Mobile" ? "-25vh" : 0,
             }}
             onClick={handleModalOpen}
             onClose={handleModalClose}
           >
-            <span className={styles.buttonText}>{t("button_home")}</span>
+            <span className={`${styles.buttonText} ${language === "heb" ? styles.hebFont : styles.enFont}`}>{t("button_home")}</span>
           </div>
 
           <video
@@ -287,13 +287,13 @@ const HomeV2 = () => {
             <div className={styles.ourMission}>
               <div>
                 <div
-                  className={styles.titleText}
+                  className={`${styles.titleText} ${language === "heb" ? styles.hebFont : styles.enFont}`}
                   style={{ whiteSpace: "pre-line" }}
                 >
                   {productsDescription && productsDescription?.title}
                 </div>
                 <div
-                  className={styles.textContent}
+                  className={`${styles.textContent} ${language === "heb" ? styles.hebFont : styles.enFont}`}
                   style={{ whiteSpace: "pre-line" }}
                 >
                   {productsDescription && productsDescription?.description}

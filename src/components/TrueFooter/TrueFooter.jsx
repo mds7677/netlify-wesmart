@@ -92,13 +92,13 @@ const TrueFooter = ({ top, style }) => {
             )}
           </div>
           <div className={styles.row2}>
-            <div className={styles.infoDiv}>{t("WESMART_COMMUNICATIONS")}</div>
-            <div className={styles.infoDiv}>
+            <div className={`${styles.infoDiv} ${language === "he" ? styles.hebFont : styles.enFont}`}>{t("WESMART_COMMUNICATIONS")}</div>
+            <div className={`${styles.infoDiv} ${language === "he" ? styles.hebFont : styles.enFont}`}>
               {t("PRIVACY_POLICY")} &ensp;&ensp;&ensp;&ensp; •
               &ensp;&ensp;&ensp;&ensp;
               {t("TERMS_CONDITIONS")}
             </div>
-            <div className={styles.infoDiv}>
+            <div className={`${styles.infoDiv} ${language === "he" ? styles.hebFont : styles.enFont}`}>
               <img src="/images/socials/cocki.svg" alt="Cookie Preferences" />
               {t("COOKIE_PREFERENCES")}
             </div>
@@ -108,12 +108,12 @@ const TrueFooter = ({ top, style }) => {
         <>
           <div className={styles.row1}>
             <div className={styles.column}>
-              <span className={styles.categoryTitle}>{t("COMPANY")}</span>
+              <span className={`${styles.categoryTitle} ${language === "he" ? styles.hebFont : styles.enFont}`}>{t("COMPANY")}</span>
               {footerData &&
                 footerData?.buttons?.button?.map((item) => (
                   <span
                     key={`footer nav ${item?.slug}`}
-                    className={styles.categoryText}
+                    className={`${styles.categoryText} ${language === "he" ? styles.hebFont : styles.enFont}`}
                     onClick={() => navigate(`/${item?.slug}`)}
                     style={{ cursor: "pointer" }}
                   >
@@ -122,11 +122,11 @@ const TrueFooter = ({ top, style }) => {
                 ))}
             </div>
             <div className={styles.column}>
-              <span className={styles.categoryTitle}>{t("PRODUCTS")}</span>
+              <span className={`${styles.categoryTitle} ${language === "he" ? styles.hebFont : styles.enFont}`}>{t("PRODUCTS")}</span>
               {slides.map(({ title, slug }) => (
                   <span
                     key={`footer product ${slug}`}
-                    className={styles.categoryText}
+                    className={`${styles.categoryText} ${language === "he" ? styles.hebFont : styles.enFont}`}
                     onClick={() => navigate(`/product/${slug}`)}
                     style={{ cursor: "pointer" }}
                   >
@@ -136,24 +136,24 @@ const TrueFooter = ({ top, style }) => {
                 ))}
             </div>
             <div className={styles.column}>
-              <span className={styles.categoryTitle}>{t("CONTACTS")}</span>
-              <span className={styles.categoryText}>
+              <span className={`${styles.categoryTitle} ${language === "he" ? styles.hebFont : styles.enFont}`}>{t("CONTACTS")}</span>
+              <span className={`${styles.categoryText} ${language === "he" ? styles.hebFont : styles.enFont}`}>
                 {commonContacts && commonContacts?.email}
               </span>
               <span
-                className={styles.categoryText}
+                className={`${styles.categoryText} ${language === "he" ? styles.hebFont : styles.enFont}`}
                 dir="ltr"
                 // style={{ marginLeft: isHebrew ? "3.7vw" : "0" }}
                 style={{ textAlign: isHebrew ? "end" : "start" }}
               >
                 {commonContacts && commonContacts?.phone}
               </span>
-              <span className={styles.categoryText}>
+              <span className={`${styles.categoryText} ${language === "he" ? styles.hebFont : styles.enFont}`}>
                 {commonContacts && commonContacts?.address}
               </span>
             </div>
             <div>
-              <div className={styles.categoryTitle}>{t("FOLLOW_US")}</div>
+              <div className={`${styles.categoryTitle} ${language === "he" ? styles.hebFont : styles.enFont}`}>{t("FOLLOW_US")}</div>
               <div className={styles.iconDiv}>
                 {commonContacts && commonContacts?.facebook_url && (
                   <a
@@ -195,15 +195,15 @@ const TrueFooter = ({ top, style }) => {
             </div>
           </div>
           <div className={styles.row2}>
-            <div className={styles.infoDiv}>
+            <div className={`${styles.infoDiv} ${language === "he" ? styles.hebFont : styles.enFont}`}>
               {t("WESMART_COMMUNICATIONS")} 2024 WESMART COMMUNICATIONS AB
             </div>
-            <div className={styles.infoDiv}>
+            <div className={`${styles.infoDiv} ${language === "he" ? styles.hebFont : styles.enFont}`}>
               {t("PRIVACY_POLICY")} &ensp;&ensp;&ensp;&ensp; •
               &ensp;&ensp;&ensp;&ensp;
               {t("TERMS_CONDITIONS")}
             </div>
-            <div className={styles.infoDiv}>
+            <div className={`${styles.infoDiv} ${language === "he" ? styles.hebFont : styles.enFont}`}>
               <img src="/images/socials/cocki.svg" alt="Cookie Preferences" />
               {t("COOKIE_PREFERENCES")}
             </div>

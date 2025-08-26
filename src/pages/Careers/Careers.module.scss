@@ -7,6 +7,12 @@
   top: 0;
   user-select: none;
 }
+.enFont{
+  font-family: "Lato", sans-serif;
+}
+.hebFont{
+  font-family: "Arimo", sans-serif;
+}
 
 .headSection {
   position: absolute;
@@ -27,7 +33,6 @@
     color: white;
   }
   .textContent {
-    font-family: "Lato", sans-serif;
     font-weight: 400;
     position: relative;
     z-index: 3;
@@ -35,7 +40,6 @@
     color: white;
   }
   .button {
-    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 18px;
     width: 175px;
@@ -92,19 +96,16 @@
     gap: 23.2vw;
   }
   .descText {
-    font-family: "Lato", sans-serif;
     font-weight: 300;
     color: rgba(170, 178, 189, 1);
     font-size: 16px;
   }
   .titleText {
-    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 48px;
     color: #363b61;
   }
   .textContent {
-    font-family: "Lato", sans-serif;
     font-weight: 100;
     margin-top: 15px;
     margin-left: 20px;
@@ -155,13 +156,11 @@
   }
   .title {
     font-weight: 400;
-    font-family: "Lato", sans-serif;
     font-size: 4.4vw;
     color: #363b61;
   }
   .subtitle {
     font-weight: 400;
-    font-family: "Lato", sans-serif;
     font-size: 2.5vw;
     color: #363b61;
   }
@@ -229,7 +228,6 @@
     color: #f5f7fa;
     font-weight: 100;
     width: auto;
-    font-family: "Lato", sans-serif;
   }
 }
 
@@ -242,7 +240,6 @@
   padding: 16px 24px;
   width: 260px;
   cursor: pointer;
-  font-family: "Lato", sans-serif;
   font-size: 18px;
   z-index: 1;
   border: none;
@@ -332,7 +329,6 @@
       padding-left: 22px;
     }
     .title {
-      font-family: unset;
       font-size: 32px;
     }
     .flexRow {

@@ -6,6 +6,13 @@
   color: green;
 }
 
+.enFont{
+  font-family: "Lato", sans-serif;
+}
+.hebFont{
+  font-family: "Arimo", sans-serif;
+}
+
 .formContainerWithShadow {
   background-color: white;
   display: flex;
@@ -28,7 +35,6 @@
       border-bottom: 1px solid #e6e9ed;
       &::placeholder {
         font-size: 1.3vw;
-        font-family: "Lato";
         color: #aab2bd;
         font-weight: 100;
       }
@@ -57,7 +63,6 @@
       border-bottom: 1px solid #e6e9ed;
       &::placeholder {
         font-size: 1.3vw;
-        font-family: "Lato";
         color: #aab2bd;
         font-weight: 100;
       }
@@ -82,7 +87,6 @@
 .pageNum {
   color: #434a53;
   font-size: 1.1vw;
-  font-family: "Lato";
   font-weight: 100;
 }
 
@@ -107,12 +111,10 @@
 .checkBoxText {
   color: #aab2bd;
   font-size: 1.1vw;
-  font-family: "Lato";
   font-weight: 100;
 }
 
 .button {
-  font-family: "Lato", sans-serif;
   font-weight: 400;
   width: 12vw;
   color: white;

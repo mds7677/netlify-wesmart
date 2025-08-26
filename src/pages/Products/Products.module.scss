@@ -1,8 +1,14 @@
 .bigContainer {
   width: 100%;
   height: 2000vh;
-  font-family: Lato, sans-serif;
 }
+.enFont{
+  font-family: "Lato", sans-serif;
+}
+.hebFont{
+  font-family: "Arimo", sans-serif;
+}
+
 .stickyBlock {
   position: sticky;
   top: 0;

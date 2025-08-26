@@ -26,10 +26,10 @@ const AdvantageBlock = ({
       style={{ "--bg-image": `url(${backgroundImage})` }} // Устанавливаем переменную фона
       onClick={device !== "Mobile" ? handleClickProduct : undefined} // Условие для onClick
     ><div className={styles.opacity}></div>
-      <div className={styles.descriptionAdvantage}></div>
+      <div className={`${styles.descriptionAdvantage} ${isRtl ? styles.hebFont : styles.enFont}`}></div>
       <div className={styles.bottomBlock}>
         <div
-          className={styles.titleAdvantage}
+          className={`${styles.titleAdvantage} ${isRtl ? styles.hebFont : styles.enFont}`}
           style={{ textTransform: "uppercase" }}
         >
           {title}

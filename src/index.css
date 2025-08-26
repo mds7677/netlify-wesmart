@@ -2,14 +2,15 @@ body {
     margin: 0;
     -ms-overflow-style: none;  
     scrollbar-width: none;    
-    font-family: "Lato", tahoma, sans-serif;
+    font-family: "Lato","Arimo", tahoma, sans-serif;
   }
   ::-webkit-scrollbar {
     display: none;
   }
   @font-face {
-    font-family: "Lato";
+    font-family: "Lato","Arimo";
     src: url("../src/assets/fonts/Lato/Lato-Regular.ttf");
+    src: url("../src/assets/fonts/Arimo,Lato/Arimo/static/Arimo-Regular.ttf");
   }
 
   .wassupButton{

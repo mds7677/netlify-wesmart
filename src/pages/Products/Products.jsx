@@ -379,7 +379,7 @@ const Products = () => {
   ].filter(Boolean);
 
   return (
-    <div className={styles.bigContainer} data-scroll-container ref={scrollRef}>
+    <div className={`${styles.bigContainer} ${isRtl ? styles.hebFont : styles.enFont}`} data-scroll-container ref={scrollRef}>
       <div className={styles.stickyBlock} data-scroll-section>
         <motion.div
           className={styles.productsScreenFirst}
@@ -388,7 +388,7 @@ const Products = () => {
           <div
             className={styles.titleText}
             style={{
-              fontFamily: "Lato, sans-serif",
+              fontFamily: isRtl ? "Arimo, sans-serif" : "Lato, sans-serif",
               fontSize: device === "Mobile" ? "7vw" : "5.4vw",
               fontWeight: "600",
               textTransform: "uppercase", // Все буквы станут заглавными
@@ -416,7 +416,7 @@ const Products = () => {
                 })}
           </div>
           <div
-            className={styles.defaultText}
+            className={`${styles.defaultText} ${isRtl ? styles.hebFont : styles.enFont}`}
             style={{ whiteSpace: "pre-line" }}
           >
             {productGeneralData && productGeneralData?.description}
@@ -464,16 +464,16 @@ const Products = () => {
                     }}
                   />
                   <div className={styles.numDiv}>
-                    <div className={styles.subtitle}>
+                    <div className={`${styles.subtitle} ${isRtl ? styles.hebFont : styles.enFont}`}>
                       {productSlidesData?.slides?.[0]?.title}
                     </div>
                     <div className={styles.pageNum}> /01</div>
                   </div>
-                  <div className={styles.defaultText}>
+                  <div className={`${styles.defaultText} ${isRtl ? styles.hebFont : styles.enFont}`}>
                     {productSlidesData?.slides?.[0]?.description}
                   </div>
                   <div
-                    className={styles.button}
+                    className={`${styles.button} ${isRtl ? styles.hebFont : styles.enFont}`}
                     onClick={() =>
                       navigate(
                         `/product/${productSlidesData?.slides?.[0]?.product_card_slug}`
@@ -488,14 +488,14 @@ const Products = () => {
                 <>
                   <div className={styles.cardContent}>
                     <div className={styles.pageNum}> /01</div>
-                    <div className={styles.subtitle}>
+                    <div className={`${styles.subtitle} ${isRtl ? styles.hebFont : styles.enFont}`}>
                       {productSlidesData?.slides?.[0]?.title}
                     </div>
-                    <div className={styles.defaultText}>
+                    <div className={`${styles.defaultText} ${isRtl ? styles.hebFont : styles.enFont}`}>
                       {productSlidesData?.slides?.[0]?.description}
                     </div>
                     <div
-                      className={styles.button}
+                      className={`${styles.button} ${isRtl ? styles.hebFont : styles.enFont}`}
                       onClick={() =>
                         navigate(
                           `/product/${productSlidesData?.slides?.[0]?.product_card_slug}`
@@ -545,17 +545,17 @@ const Products = () => {
                         }}
                       />
                       <div className={styles.numDiv}>
-                        <div className={styles.subtitle}>{screen.subtitle}</div>
+                        <div className={`${styles.subtitle} ${isRtl ? styles.hebFont : styles.enFont}`}>{screen.subtitle}</div>
                         <div className={styles.pageNum}> /0{screen.id}</div>
                       </div>
                       <div
-                        className={styles.defaultText}
+                        className={`${styles.defaultText} ${isRtl ? styles.hebFont : styles.enFont}`}
                         style={{ whiteSpace: "pre-line" }}
                       >
                         {screen.text}
                       </div>
                       <div
-                        className={styles.button}
+                        className={`${styles.button} ${isRtl ? styles.hebFont : styles.enFont}`}
                         onClick={() => {
                           if (isLastScreen) {
                             handleScrollToForm();
@@ -571,15 +571,15 @@ const Products = () => {
                     <>
                       <div className={styles.cardContent}>
                         <div className={styles.pageNum}> /0{screen.id}</div>
-                        <div className={styles.subtitle}>{screen.subtitle}</div>
+                        <div className={`${styles.subtitle} ${isRtl ? styles.hebFont : styles.enFont}`}>{screen.subtitle}</div>
                         <div
-                          className={styles.defaultText}
+                          className={`${styles.defaultText} ${isRtl ? styles.hebFont : styles.enFont}`}
                           style={{ whiteSpace: "pre-line" }}
                         >
                           {screen.text}
                         </div>
                         <div
-                          className={styles.button}
+                          className={`${styles.button} ${isRtl ? styles.hebFont : styles.enFont}`}
                           onClick={() => {
                             if (isLastScreen) {
                               handleScrollToForm();

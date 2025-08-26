@@ -41,7 +41,7 @@ const TitleSection = ({ ourLanguage, top }) => {
       <div
         className={styles.title}
         style={{
-          fontFamily: "Lato, sans-serif",
+          fontFamily: isRtl ? "Arimo, sans-serif" : "Lato, sans-serif",
           fontSize: device === "Mobile" ? "7vw" : "5.4vw",
           fontWeight: "600",
           textTransform: "uppercase", // Все буквы станут заглавными
@@ -67,13 +67,13 @@ const TitleSection = ({ ourLanguage, top }) => {
               return t(part);
             })}
       </div>
-      <div className={styles.descriptionBlock}>
+      <div className={`${styles.descriptionBlock} ${ isRtl ? styles.hebFont : styles.enFont}`}>
         <div className={styles.subtitle}>{t("ABOUT_US")}</div>
         <div style={{ whiteSpace: "pre-line" }} className={styles.text}>
           {aboutMainData && aboutMainData?.description}
         </div>
       </div>
-      <div className={styles.videoContainer}>
+      <div className={`${styles.videoContainer} ${ isRtl ? styles.hebFont : styles.enFont}`}>
         <div className={styles.imageMobileDiv}>
           <img src="/images/aboutVideo.svg" alt="no-image" />
         </div>

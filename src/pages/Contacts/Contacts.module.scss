@@ -7,7 +7,12 @@
   padding: 0 39.5vw 0 39.5vw;
   margin-top: 10vw;
 }
-
+.enFont{
+  font-family: "Lato", sans-serif;
+}
+.hebFont{
+  font-family: "Arimo", sans-serif;
+}
 .baseContainer {
   margin-top: 0.8vw;
 }
@@ -15,20 +20,17 @@
 .title {
   color: #363b61;
   font-size: 3vw;
-  font-family: "Lato", sans-serif;
   font-weight: 600;
 }
 
 .subtitle {
   margin-top: 0.5vw;
   font-size: 1.2vw;
-  font-family: "Lato", sans-serif;
   font-weight: 200;
   color: #434a53;
 }
 
 .topicTitle {
-  font-family: "Lato", sans-serif;
   font-weight: 100;
   color: #aab2bd;
   font-size: 1.2vw;
@@ -36,7 +38,6 @@
 }
 
 .emailText {
-  font-family: "Lato", sans-serif;
   font-weight: bold;
   font-size: 1.6vw;
   padding-left: 0.5vw;
@@ -66,7 +67,6 @@
 }
 
 .phoneText {
-  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 2.3vw;
   color: #363b61;
@@ -91,7 +91,6 @@
 }
 
 .addressText {
-  font-family: "Lato", sans-serif;
   font-weight: bold;
   font-size: 1.6vw;
   color: #363b61;

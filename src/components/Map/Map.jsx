@@ -10,6 +10,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectMapPointsData } from "../../store/selectors/content/mapPointsSelectors";
 import { fetchMapPoints } from "../../store/api/content";
 
+const currentLanguage = localStorage.getItem("language");
+
 const MapPoint = ({ top, left, name, delay }) => (
   <motion.div
     className={styles.pointContainer}
@@ -19,7 +21,7 @@ const MapPoint = ({ top, left, name, delay }) => (
     transition={{ delay, duration: 0.5, ease: "easeOut" }}
   >
     <div className={styles.point} />
-    <span className={styles.pointLabel}>{name}</span>
+    <span className={`${styles.pointLabel} ${currentLanguage === "heb" ? styles.hebFont : styles.enFont }`}>{name}</span>
   </motion.div>
 );
 
@@ -75,7 +77,6 @@ const Map = () => {
     setIsModalVisible(false);
   };
 
-  const currentLanguage = localStorage.getItem("language");
 
   const mapPointsData = useSelector((state) =>
     selectMapPointsData(state, currentLanguage)
@@ -160,7 +161,7 @@ const Map = () => {
             delay={2.3}
           />
           <div
-            className={styles.button}
+            className={`${styles.button} ${currentLanguage === "heb" ? styles.hebFont : styles.enFont}`}
             onClick={handleModalOpen}
             onClose={handleModalClose}
           >

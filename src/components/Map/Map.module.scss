@@ -6,6 +6,13 @@
   overflow: hidden;
 }
 
+.enFont{
+  font-family: "Lato", sans-serif;
+}
+.hebFont{
+  font-family: "Arimo", sans-serif;
+}
+
 .mapImage {
   width: 100vw;
   height: 101vh;
@@ -24,7 +31,6 @@
 .pointLabel {
   color: #f77f1e;
   font-size: 1.5vw;
-  font-family: "Lato", sans-serif;
   font-weight: 400;
   margin-left: 15px;
 }
@@ -72,7 +78,6 @@
 }
 
 .button {
-  font-family: "Lato", sans-serif;
   font-weight: 400;
   width: 12vw;
   color: white;
@@ -170,7 +175,6 @@
 
   .pointLabel {
     font-size: 18px;
-    font-family: "Lato";
     font-weight: 500;
   }
 

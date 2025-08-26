@@ -114,7 +114,7 @@ const ValueSection = ({
         )}
       </div>
 
-      <div className={styles.worthesContainer}>
+      <div className={`${styles.worthesContainer} ${isRtl ? styles.hebFont : styles.enFont}`}>
         {combinedData.map((worth, index) => (
           <motion.div
             key={index}

@@ -105,8 +105,13 @@
   width: 100%;
   top: 0vh;
 }
-.button {
+.enFont{
   font-family: "Lato", sans-serif;
+}
+.hebFont{
+  font-family: "Arimo", sans-serif;
+}
+.button {
   font-weight: 400;
   width: 12vw;
   color: white;
@@ -567,7 +572,6 @@
     height: 100vh;
   }
   .button {
-    font-family: "Lato", sans-serif;
     font-weight: 400;
     width: 283px;
     height: 35px;
@@ -589,7 +593,6 @@
     }
     .text {
       font-size: 18px;
-      font-family: "Lato", sans-serif;
     }
   }
 
@@ -617,7 +620,6 @@
       background: rgba(245, 247, 250, 1);
     }
     .videoButton {
-      font-family: "Lato", sans-serif;
       width: 75.4vw;
       height: 6.8vw;
       border-radius: 64px;
@@ -640,7 +642,6 @@
     }
     .ourVision {
       font-size: 16px;
-      font-family: "Lato", sans-serif;
       color: rgba(67, 74, 83, 1);
     }
     .maskedMan {
@@ -712,7 +713,6 @@
     .worthTitle {
       color: rgba(67, 74, 83, 1);
       font-size: 16px;
-      font-family: "Lato", sans-serif;
     }
     .worthText {
       color: rgba(54, 59, 97, 1);
@@ -750,7 +750,6 @@
     .blockName {
       color: rgba(67, 74, 83, 1);
       font-size: 16px;
-      font-family: "Lato", sans-serif;
       text-transform: uppercase;
       position: relative;
       z-index: 4;
@@ -758,7 +757,6 @@
     .blockNameMobile {
       color: rgba(67, 74, 83, 1);
       font-size: 18px;
-      font-family: "Lato", sans-serif;
       position: relative;
       z-index: 4;
     }
@@ -792,7 +790,6 @@
     left: 0;
     border-radius: 36px;
     .blockName {
-      font-family: "Lato", sans-serif;
       color: rgba(67, 74, 83, 1);
       font-size: 16px;
       margin-left: 24px;
@@ -818,7 +815,6 @@
       margin-top: 50vw;
     }
     .textContent {
-      font-family: "Lato", sans-serif;
       font-size: 18px;
       color: rgba(67, 74, 83, 1);
     }
@@ -865,7 +861,6 @@
     .textContent {
       font-size: 18px;
       color: rgba(67, 74, 83, 1);
-      font-family: "Lato", sans-serif;
     }
   }
 }

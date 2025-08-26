@@ -157,7 +157,7 @@ const Footer = ({ transparent, color, isMenuOpen, setIsMenuOpen }) => {
                   </select>
                 </div>
                 <div
-                  className={styles.button}
+                  className={`${styles.button} ${language === "heb" ? styles.hebFont : styles.enFont}`}
                   onClick={handleModalOpen}
                   onClose={handleModalClose}
                 >
@@ -178,7 +178,7 @@ const Footer = ({ transparent, color, isMenuOpen, setIsMenuOpen }) => {
                     <li key={item.slug}>
                       <Link
                         to={`/${item.slug === "home" ? "" : item.slug}`}
-                        className={styles.footerLinksA}
+                        className={`${styles.footerLinksA} ${language ? styles.hebFont : styles.enFont}`}
                         style={{
                           color:
                             activePath ===
@@ -203,7 +203,7 @@ const Footer = ({ transparent, color, isMenuOpen, setIsMenuOpen }) => {
             onClick={handleModalOpen}
             onClose={handleModalClose}
           >
-            <div className={styles.button}>
+            <div className={`${styles.button} ${language === "heb" ? styles.hebFont : styles.enFont}`}>
               <span className={styles.buttonText}>
                 {headerData && <>{headerData?.button_text}</>}
               </span>

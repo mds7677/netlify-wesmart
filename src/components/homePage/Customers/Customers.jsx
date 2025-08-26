@@ -79,7 +79,7 @@ const Customers = () => {
     <div className={styles.container}>
       {/* Customers Section */}
       <div className={styles.textContainer}>
-        <div className={styles.title}>
+        <div className={`${styles.title} ${currentLanguage === "he" ? styles.hebFont : styles.enFont}`}>
           {logotypesData &&
             logotypesData?.Title?.title
               ?.split(/\/color\/(.*?)\/color\//g)
@@ -97,7 +97,7 @@ const Customers = () => {
                 return part;
               })}
         </div>
-        <div className={styles.subTitle}>
+        <div className={`${styles.subTitle} ${currentLanguage === "he" ? styles.hebFont : styles.enFont}`}>
           {logotypesData && logotypesData?.Title?.description}
         </div>
       </div>
@@ -124,7 +124,7 @@ const Customers = () => {
           </div>
 
           {/* Логотипы партнеров для мобильных устройств */}
-          <div className={styles.titlePartner}>{t("partners")}</div>
+          <div className={`${styles.titlePartner} ${currentLanguage === 'he' ? styles.hebFont : styles.enFont}`}>{t("partners")}</div>
           <div className={styles.logoContainerPartner}>
             {mobilePartnerLogos.map((logo, index) => (
               <div
@@ -184,7 +184,7 @@ const Customers = () => {
             ))}
           </div>
 
-          <div className={styles.titlePartner}>
+          <div className={`${styles.titlePartner} ${currentLanguage === 'he' ? styles.hebFont : styles.enFont}`}>
             {partnersData && partnersData?.Title?.title}
           </div>
           <div className={styles.logoContainerPartner}>

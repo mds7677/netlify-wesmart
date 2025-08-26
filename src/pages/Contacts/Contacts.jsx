@@ -83,13 +83,13 @@ export default function Contacts() {
         <div className={styles.mainContainer}>
           <Footer isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
           <div className={styles.contactContainer}>
-            <div className={styles.title}>
+            <div className={`${styles.title} ${isRtl ? styles.hebFont : styles.enFont}`}>
               {contactData && (
                 <>
                   {contactData?.title}
                   {contactData?.description && (
                     <p
-                      className={styles.subtitle}
+                      className={`${styles.subtitle} ${isRtl  ? styles.hebFont : styles.enFont}`}
                       style={{ whiteSpace: "pre-line" }}
                     >
                       {contactData.description}
@@ -99,9 +99,9 @@ export default function Contacts() {
               )}
             </div>
             <div className={styles.baseContainer}>
-              <div className={styles.topicTitle}>{t("EMAIL")}</div>
+              <div className={`${styles.topicTitle} ${isRtl ? styles.hebFont : styles.enFont}`}>{t("EMAIL")}</div>
               <div className={styles.buttonContainer}>
-                <span className={styles.emailText} ref={emailRef} id="email">
+                <span className={`${styles.emailText} ${isRtl ? styles.hebFont : styles.enFont}`} ref={emailRef} id="email">
                   {commonContacts && commonContacts?.email}
                 </span>
                 <button className={styles.copyButton} onClick={copyToClipboard}>
@@ -110,9 +110,9 @@ export default function Contacts() {
               </div>
             </div>
             <div className={styles.baseContainer}>
-              <div className={styles.topicTitle}>{t("PHONE")}</div>
+              <div className={`${styles.topicTitle} ${isRtl ? styles.hebFont : styles.enFont}`}>{t("PHONE")}</div>
               <div
-                className={styles.phoneText}
+                className={`${styles.phoneText} ${isRtl ? styles.hebFont : styles.enFont}`}
                 dir="ltr"
                 style={{ marginLeft: isRtl ? "1.5vw" : "0" }}
               >
@@ -120,7 +120,7 @@ export default function Contacts() {
               </div>
             </div>
             <div className={styles.baseContainer}>
-              <div className={styles.topicTitle}>{t("FOLLOW_US")}</div>
+              <div className={`${styles.topicTitle} ${isRtl ? styles.hebFont : styles.enFont}`}>{t("FOLLOW_US")}</div>
               <div
                 className={styles.networkContainer}
                 style={{ display: "flex", gap: "10px 25px" }}
@@ -172,8 +172,8 @@ export default function Contacts() {
           <div className={styles.divider}></div>
           <div className={styles.addressContainer}>
             <div className={styles.streetContainer}>
-              <div className={styles.topicTitle}>{t("ADDRESS")}</div>
-              <div className={styles.addressText}>
+              <div className={`${styles.topicTitle} ${isRtl  ? styles.hebFont : styles.enFont}`}>{t("ADDRESS")}</div>
+              <div className={`${styles.addressText} ${isRtl ? styles.hebFont : styles.enFont}`}>
                 {commonContacts && commonContacts?.address}
               </div>
             </div>

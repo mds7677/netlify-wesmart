@@ -33,13 +33,19 @@
   z-index: 0;
 }
 
+.enFont{
+  font-family: "Lato", sans-serif;
+}
+.hebFont{
+  font-family: "Arimo", sans-serif;
+}
+
 .descriptionAdvantage {
   font-style: normal;
   font-weight: 400;
   padding: 0 32px;
   width: 85%;
   font-size: 18px;
-  font-family: "Lato", sans-serif;
   color: #434a53;
   line-height: normal;
   transition: opacity 0.3s ease;
@@ -55,7 +61,6 @@
 }
 .titleAdvantage {
   color: #363b61;
-  font-family: "Bebas Neue Cyrillic", sans-serif;
   font-size: 2vw;
   font-style: normal;
   font-weight: 600;

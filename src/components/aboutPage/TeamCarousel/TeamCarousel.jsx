@@ -115,10 +115,10 @@ const TeamCarousel = ({ content, media }) => {
   };
 
   return (
-    <div className={styles.carouselContainer}>
+    <div className={`${styles.carouselContainer} ${rtlSetting ? styles.hebFont : styles.enFont}`}>
       <Slider key={rtlSetting ? "ltr" : "ltr"} {...settings}>
         {teamMembers.map((member, index) => (
-          <div key={index} className={styles.memberCard}>
+          <div key={index} className={`${styles.memberCard} ${rtlSetting ? styles.hebFont : styles.enFont}`}>
             <div className={styles.imageDiv}>
               <img
                 src={member.load}
